@@ -1,0 +1,30 @@
+#tickets-page{
+  position: relative;
+}
+
+#tickets-heading{
+  position: absolute;
+  top: 5%;
+  left: 10%;
+}
+
+#tickets-text{
+  color: white;
+  font-size: 5em;
+}
+
+.egg-box{
+  border-width: 2px;
+  border-style: solid;
+  border-color: white;
+}
+
+.egg-intro-box{
+  border-width: 1px;
+  border-style: dotted;
+  border-color: white;
+}
+
+.egg-intro{
+  width:10%;
+}

@@ -1,0 +1,65 @@
+<br>
+<center>
+  <img id="ticket-image" src="/ticket-pic.png">
+</center>
+<br>
+
+<div class="wrapper">
+  <div class="container">
+    <div class="row" id="my-tickets">
+      <div class="col-md-1">
+        </div>
+      <div class="col-md-6">
+        <center>
+        <h1 id="qr-code-title">Your WDI4 Conf Ticket</h1>
+        <center>
+
+        <div class="row">
+          <div class="col-md-3">
+            <br>
+            <p class="ticket-text">Name: </p>
+          </div>
+          <div class="col-md-6">
+            <h4  class="ticket-text">Gregory Fernandes</h4>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-3">
+            <br>
+            <p class="ticket-text">Seat #: </p>
+          </div>
+          <div class="col-md-6">
+            <h4  class="ticket-text">A18</h4>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-3">
+            <br>
+            <p class="ticket-text">email:</p>
+          </div>
+          <div class="col-md-6">
+            <h4  class="ticket-text">greg@wdi4.com</h4>
+          </div>
+        </div>
+
+      </div>
+      <center>
+        <br><br><br>
+        <div class="col-md-3" id="qrcode">
+        </div>
+      </center>
+    </div>
+  </div>
+</div>
+
+<script>
+  $("#qrcode").qrcode({
+    "size": 100,
+    "color": "#3a3",
+    "fill": "red",
+    "text": "GREGORY FERNANDES A18"
+  });
+
+</script>
