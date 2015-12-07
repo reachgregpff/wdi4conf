@@ -10,9 +10,10 @@
  * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
  * file per style scope.
  *
- *= require_tree .
- *= require_self
+
+
  */
+
 
  body {
      background-image: url('/yarra_river_melbourne_australia_skyline_vintage_hd-wallpaper-171343.jpg');
@@ -59,12 +60,6 @@ p{
     /*background-color: #800;*/
     /*background-color: #99FFFF;*/
     /*background-color: #FF0;*/
-}
-
-footer.footer {
-    background-color: rgb(0, 0, 0);
-    border-top: dashed 3px orange;
-    margin-top: 64px;
 }
 
 /* Extra small devices (phones, less than 768px) */

@@ -1,0 +1,14 @@
+.photo{
+    width: 70%;
+    border: 2px solid white;
+    border-radius: 100px;
+}
+
+.photo:hover{
+    border: 2px solid gold;
+}
+
+.profile-summary{
+  font-size: 15px;
+  font-style: italic;
+}

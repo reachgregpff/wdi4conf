@@ -1,6 +1,6 @@
     <!--Main Content -->
 
-<div class="wrapper" id="home">
+<div id="home">
   <div class="row">
   <div id="stage">
     <!-- <img src="/stage-aquablue2.jpg" class="img-responsive" id="stage-image" alt="Responsive image"> -->
@@ -19,7 +19,7 @@
   </div>
  </div>
   <!-- <img src="/curtain-up.jpg" class="img-responsive" id="curtain" alt="Responsive image"> -->
-<!-- </div> -->
+</div>
 
 
 <!-- <script>
@@ -101,7 +101,6 @@ curtain = $('#curtain').animate({ height: 50 },{duration: 8000});
     </div>
 
   </div>
-</div>
 
 
 
@@ -118,7 +117,7 @@ curtain = $('#curtain').animate({ height: 50 },{duration: 8000});
       <h6 id="text">Melbourne</h6>
     </div>
   </div>  -->
-    <div class="col-md-10 ticket-heading-style" id="tickets-heading">
+    <div class="col-md-10 col-sm-10 ticket-heading-style" id="tickets-heading">
 
       <center>
         <h1>TICKETS</h1>
@@ -232,13 +231,10 @@ curtain = $('#curtain').animate({ height: 50 },{duration: 8000});
 <!--SPONSORS -->
 
 <!--CONTACT US -->
-<div class="wrapper">
-  <div id="contacts-page">
+<div class="container" id="contacts-page">
     <!-- <img src="/image-city.jpg" class="img-responsive" id="tickets-image" alt="Responsive image"> -->
 
-    <div class="container" id="contacts-heading">
-
-      <div class="row">
+    <div id="contacts-heading">
 
         <div class="col-md-6">
           <h3 id="tickets-text">CONTACT</h3>
@@ -252,28 +248,6 @@ curtain = $('#curtain').animate({ height: 50 },{duration: 8000});
           <div class='conf-map'></div>
         </div>
 
-      </div>
 
     </div>
-  </div>
 </div>
-
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDPgGpH-ul7LWldsPvGDdI1j1vRqqlSn7I"></script>
-<script>
-  $('document').ready(function(){
-
-    var map = new google.maps.Map($('.conf-map')[0], {
-      zoom: 15,
-      center: { lat: -37.817954, lng: 144.959257}
-    });
-
-
-    console.log(map);
-
-    var marker = new google.maps.Marker({
-      position: {lat: -37.817954, lng: 144.959257},
-      map: map,
-      title: "WDI4 Conf"
-    })
-  });
-</script>

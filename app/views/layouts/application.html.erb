@@ -1,45 +1,58 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Wdi4conf</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDPgGpH-ul7LWldsPvGDdI1j1vRqqlSn7I"></script>
 </head>
 <body>
 
-  <div class="navbar navbar-inverse navbar-static-top" >
-    <div class="container">
-      <a href="#" class="navbar-brand"> Logo Here! </a>
-
-      <button class="navbar-toggle" data-toggle="collapse" data-target=".navHeaderCollapse">
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-
-      <div class="collapse navbar-collapse navHeaderCollapse">
-        <ul class="nav navbar-nav navbar-right">
-          <li class="active"><a href="">WDI4 Conf</a></li>
-          <li><a href="#speakers">Speakers</a></li>
-          <li><a href="#">Schedule</a></li>
-          <li><a href="#">Tickets</a></li>
-          <li><a href="#">Events</a></li>
-          <li><a href="#">TwitterFeed</a></li>
-          <li><a href="#">Contact</a></li>
-        </ul>
-      </div>
+<nav class="navbar navbar-inverse navbar-static-top">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-9" aria-expanded="false"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button> <a class="navbar-brand" href="/">Logo Here</a>
+     </div>
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-9">
+      <ul class="nav navbar-nav navbar-right">
+        <li class="active"><a href="">WDI4 Conf</a></li>
+        <li><a href="#speakers">Speakers</a></li>
+        <li><a href="#">Schedule</a></li>
+        <li><a href="#">Tickets</a></li>
+        <li><a href="#">Events</a></li>
+        <li><a href="#">TwitterFeed</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
     </div>
   </div>
+</nav>
+
 <div class="container-fluid">
 
 <%= yield %>
 
 </div>
-<!-- <div class="footer">
-    <p style="color:white;">Site built by WDI4-Famous5.                       This site is for educational purposes only.</p>
 
-</div> -->
+
+
+<footer class="footer">
+  <div class="container">
+    <div class="col-md-4">
+      <h3>Blah Bablah</h3>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit</p>
+    </div>
+    <div class="col-md-4">
+      <h3>Blah Bablah</h3>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit</p>
+    </div>
+    <div class="col-md-4">
+      <h3>Blah Bablah</h3>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit</p>
+    </div>
+  </div>
+</footer>
 
 </body>
 </html>
