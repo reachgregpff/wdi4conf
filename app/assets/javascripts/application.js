@@ -13,4 +13,22 @@
 //= require jquery
 //= require jquery_ujs
 //= require turbolinks
+//require bootstrap.min
 //= require_tree .
+
+$('document').ready(function(){
+
+  var map = new google.maps.Map($('.conf-map')[0], {
+    zoom: 15,
+    center: { lat: -37.817954, lng: 144.959257}
+  });
+
+
+  console.log(map);
+
+  var marker = new google.maps.Marker({
+    position: {lat: -37.817954, lng: 144.959257},
+    map: map,
+    title: "WDI4 Conf"
+  })
+});

@@ -1,0 +1,99 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+
+
+ */
+
+
+ body {
+     background-image: url('/yarra_river_melbourne_australia_skyline_vintage_hd-wallpaper-171343.jpg');
+     background-repeat: no-repeat;
+     background-attachment: fixed;
+     background-position: center;
+ }
+
+.navbar {      /* this is to remove the mysterious space under the navbar and above the main image */
+    margin-bottom: 0;
+}
+
+h1{
+  color: white;
+  text-shadow: -1px 0 gold, 0 1px gold, 1px 0 gold, 0 -1px gold;
+}
+
+h2{
+  color: gold;
+}
+
+h3{
+  color:blue;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px white;
+}
+
+h4{
+  color:gold;
+}
+
+h5{
+  color:aqua;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px white;
+}
+h6{
+  color:gold;
+}
+p{
+  color: white;
+}
+
+.wrapper {
+    width: 100%;
+    /*background-color: #800;*/
+    /*background-color: #99FFFF;*/
+    /*background-color: #FF0;*/
+}
+
+/* Extra small devices (phones, less than 768px) */
+/* No media query since this is the default in Bootstrap */
+
+/* Small devices (tablets, 768px and up) */
+@media (max-width: 786px) {
+
+  #home{
+    margin-bottom: 31%;
+  }
+
+  .app-info {
+    right: -5%;
+  }
+
+  .ticket-heading-style {
+    top: 5%;
+    left: 10%;
+  }
+
+  #wdi-conf-text {
+      color: white;
+      font-size: 2em;
+      margin-bottom: 9px;
+  }
+}
+
+/* Medium devices (desktops, 992px and up) */
+@media (min-width: @screen-md-min) {
+
+}
+
+/* Large devices (large desktops, 1200px and up) */
+@media (min-width: @screen-lg-min) {
+
+}

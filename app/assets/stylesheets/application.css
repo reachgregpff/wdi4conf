@@ -13,10 +13,13 @@
  *= require_tree .
  *= require_self
  */
-body{
-  background-image: url("/background-red.jpg");
-}
 
+ body {
+     background-image: url('/yarra_river_melbourne_australia_skyline_vintage_hd-wallpaper-171343.jpg');
+     background-repeat: no-repeat;
+     background-attachment: fixed;
+     background-position: center;
+ }
 
 .navbar {      /* this is to remove the mysterious space under the navbar and above the main image */
     margin-bottom: 0;
@@ -57,8 +60,8 @@ p{
     /*background-color: #99FFFF;*/
     /*background-color: #FF0;*/
 }
- 
 
+/*timeline---------------*/
 section#timeline {
     font-family: Helvetica, sans-serif;
   width: 80%;
@@ -180,3 +183,47 @@ section#timeline article:nth-child(2) div.inner h2 {
 section#timeline article:nth-child(2) div.inner h2:after {
   background: #2ecc71;
 }
+/*timeline -------------------------------------*/
+
+footer.footer {
+    background-color: rgb(0, 0, 0);
+    border-top: dashed 3px orange;
+    margin-top: 64px;
+}
+
+/* Extra small devices (phones, less than 768px) */
+/* No media query since this is the default in Bootstrap */
+
+/* Small devices (tablets, 768px and up) */
+@media (max-width: 786px) {
+
+  #home{
+    margin-bottom: 31%;
+  }
+
+  .app-info {
+    right: -5%;
+  }
+
+  .ticket-heading-style {
+    top: 5%;
+    left: 10%;
+  }
+
+  #wdi-conf-text {
+      color: white;
+      font-size: 2em;
+      margin-bottom: 9px;
+  }
+}
+
+/* Medium devices (desktops, 992px and up) */
+@media (min-width: @screen-md-min) {
+
+}
+
+/* Large devices (large desktops, 1200px and up) */
+@media (min-width: @screen-lg-min) {
+
+}
+
