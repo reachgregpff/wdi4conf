@@ -1,15 +1,12 @@
     <!--Main Content -->
 
 <div class="wrapper" id="home">
-
-  <div id="stage">
-    <img src="/stage-aquablue2.jpg" class="img-responsive" id="stage-image" alt="Responsive image">
-    <!--<img src="/stage-yellow.jpg" class="img-responsive" id="stage-image" alt="Responsive image">-->
-  <div class="container" id="wdi-heading">
-
   <div class="row">
-    <center>
-      <div class="col-md-12">
+  <div id="stage">
+    <!-- <img src="/stage-aquablue2.jpg" class="img-responsive" id="stage-image" alt="Responsive image"> -->
+    <!--<img src="/stage-yellow.jpg" class="img-responsive" id="stage-image" alt="Responsive image">-->
+  <!-- <div class="container" id="wdi-heading"> -->
+      <div class="col-md-6 app-info">
         <h1 id="wdi-conf-text">WDI4 Conf</h1>
         <!--<h3>...where impossible is nothing.</h3> -->
         <h4>45 William St, Melbourne</h4>
@@ -18,19 +15,20 @@
         <a href="#speakers">
           <img src="down-arrow.png" id="down-arrow">
         </a>
-      </center>
     </div>
   </div>
-  <img src="/curtain-up.jpg" class="img-responsive" id="curtain" alt="Responsive image">
-</div>
+ </div>
+  <!-- <img src="/curtain-up.jpg" class="img-responsive" id="curtain" alt="Responsive image"> -->
+<!-- </div> -->
 
 
-<script>
-curtain = $('#curtain').animate({ height: 50 },{duration: 8000}); 
-</script>   
+<!-- <script>
+curtain = $('#curtain').animate({ height: 50 },{duration: 8000});
+</script>    -->
 
-<!--SPEAKERS --> 
+<!--SPEAKERS -->
 <div class="wrapper" id="about-conf">
+  <a name="speakers"></a>
   <div class="container" >
 
       <center>
@@ -109,10 +107,10 @@ curtain = $('#curtain').animate({ height: 50 },{duration: 8000});
 
 <!--Buy Tickets  -->
 <div class="wrapper">
-  
+
 
   <div id="tickets-page">
-    <img src="/Ticket-background.png" class="img-responsive" id="tickets-image" alt="Responsive image">
+    <!-- <img src="/Ticket-background.png" class="img-responsive" id="tickets-image" alt="Responsive image"> -->
     <!--<div class="sol-sm-12" id="welcome">
       <h1 id="text">Welcome to WDIConf</h1>
     </div>
@@ -120,12 +118,12 @@ curtain = $('#curtain').animate({ height: 50 },{duration: 8000});
       <h6 id="text">Melbourne</h6>
     </div>
   </div>  -->
-    <div class="container" id="tickets-heading">
+    <div class="col-md-10 ticket-heading-style" id="tickets-heading">
 
       <center>
         <h1>TICKETS</h1>
       </center>
-     
+
       <div class="row">
         <center>
           <div class="col-md-4">
@@ -149,7 +147,7 @@ curtain = $('#curtain').animate({ height: 50 },{duration: 8000});
       <center>
         <h1>PLAY THE SEATS GAME</h1>
       </center>
-    
+
 
       <div class="row" id="egg-box">
         <div class="col-md-4" class="egg-intro-box">
@@ -180,23 +178,23 @@ curtain = $('#curtain').animate({ height: 50 },{duration: 8000});
         <center>
           <div class="col-md-12">
             <a href="/seats">
-              <button type="button" class="btn btn-primary">PLAY GAME or BUY TICKETS</button>
+              <button type="button" class="btn btn-primary play-game-btn">PLAY GAME or BUY TICKETS</button>
             </a>
           </div>
         </center>
       </div>
-   
+
     </div>
   </div>
 </div>
 
-<!--AGENDA --> 
-<div class="wrapper" id="schedule-box">
+<!--AGENDA -->
+<div class="wrapper1" id="schedule-box">
   <div class="container" >
       <center>
         <h1>AGENDA</h1>
       </center>
-      <p> 
+      <p>
         Plain text is the most portable format because it is supported by nearly every application on every machine. It is quite limited, however, because it cannot contain any formatting commands. In cryptography, plain text refers to any message that is not encrypted. Contrast with cipher text.
         Plain text is the most portable format because it is supported by nearly every application on every machine. It is quite limited, however, because it cannot contain any formatting commands. In cryptography, plain text refers to any message that is not encrypted. Contrast with cipher text.
         Plain text is the most portable format because it is supported by nearly every application on every machine. It is quite limited, however, because it cannot contain any formatting commands. In cryptography, plain text refers to any message that is not encrypted. Contrast with cipher text.
@@ -211,14 +209,14 @@ curtain = $('#curtain').animate({ height: 50 },{duration: 8000});
 
 
 
-<!--TWITTER FEED --> 
+<!--TWITTER FEED -->
 
 <div class="wrapper" id="twitter-feed">
   <div class="container" >
       <center>
         <h1>TWITTER FEED</h1>
       </center>
-      <p> 
+      <p>
         Plain text is the most portable format because it is supported by nearly every application on every machine. It is quite limited, however, because it cannot contain any formatting commands. In cryptography, plain text refers to any message that is not encrypted. Contrast with cipher text.
         Plain text is the most portable format because it is supported by nearly every application on every machine. It is quite limited, however, because it cannot contain any formatting commands. In cryptography, plain text refers to any message that is not encrypted. Contrast with cipher text.
         Plain text is the most portable format because it is supported by nearly every application on every machine. It is quite limited, however, because it cannot contain any formatting commands. In cryptography, plain text refers to any message that is not encrypted. Contrast with cipher text.
@@ -231,12 +229,12 @@ curtain = $('#curtain').animate({ height: 50 },{duration: 8000});
 
 
 
-<!--SPONSORS --> 
+<!--SPONSORS -->
 
 <!--CONTACT US -->
 <div class="wrapper">
   <div id="contacts-page">
-    <img src="/image-city.jpg" class="img-responsive" id="tickets-image" alt="Responsive image">
+    <!-- <img src="/image-city.jpg" class="img-responsive" id="tickets-image" alt="Responsive image"> -->
 
     <div class="container" id="contacts-heading">
 
@@ -261,7 +259,7 @@ curtain = $('#curtain').animate({ height: 50 },{duration: 8000});
 </div>
 
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDPgGpH-ul7LWldsPvGDdI1j1vRqqlSn7I"></script>
-<script> 
+<script>
   $('document').ready(function(){
 
     var map = new google.maps.Map($('.conf-map')[0], {

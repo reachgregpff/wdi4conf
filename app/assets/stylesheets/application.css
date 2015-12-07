@@ -13,12 +13,13 @@
  *= require_tree .
  *= require_self
  */
-body{
-  background-image: url("/yarra_river_melbourne_australia_skyline_vintage_hd-wallpaper-171343.jpg");
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-position: center; 
-}
+
+ body {
+     background-image: url('/yarra_river_melbourne_australia_skyline_vintage_hd-wallpaper-171343.jpg');
+     background-repeat: no-repeat;
+     background-attachment: fixed;
+     background-position: center;
+ }
 
 .navbar {      /* this is to remove the mysterious space under the navbar and above the main image */
     margin-bottom: 0;
@@ -59,5 +60,23 @@ p{
     /*background-color: #99FFFF;*/
     /*background-color: #FF0;*/
 }
- 
 
+/* Extra small devices (phones, less than 768px) */
+/* No media query since this is the default in Bootstrap */
+
+/* Small devices (tablets, 768px and up) */
+@media (min-width: @screen-sm-min) {
+  .app-info {
+    position: absolute
+  }
+
+  .ticket-heading-style {
+
+  }
+}
+
+/* Medium devices (desktops, 992px and up) */
+@media (min-width: @screen-md-min) { ... }
+
+/* Large devices (large desktops, 1200px and up) */
+@media (min-width: @screen-lg-min) { ... }

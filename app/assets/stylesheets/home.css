@@ -14,7 +14,7 @@ img {
 
 #text {
     z-index:3;
-    position:absolute;    
+    position:absolute;
     color:white;
     font-size:20em%;
     font-weight:bold;
@@ -39,18 +39,18 @@ img {
 
 #wdi-conf-text{
   color: white;
-  font-size: 5em;
+  font-size: 19em;
 }
 
 #welcome{
   z-index: -1;
 }
 
-#curtain{
-  position:absolute; 
+/*#curtain{
+  position:absolute;
   z-index: 5;
   top: 0px;
-}
+}*/
 
 #about-conf{
   z-index: 10;
@@ -60,10 +60,8 @@ img {
   width: 8%;
 }
 
-
-
-
-
-
-
-
+.app-info {
+  top: 21%;
+  right: -5%;
+  text-align: center;
+}
