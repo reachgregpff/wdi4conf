@@ -3,9 +3,17 @@
 }
 
 #tickets-heading{
-  position: absolute;
   top: 5%;
   left: 10%;
+}
+
+.ticket-heading-style {
+  position: relative;
+  margin-bottom: 5%;
+  margin-top: 5%;
+  background-color: rgba(0, 0, 0, 0.5);
+  /* border-radius: 1%; */
+  box-shadow: 1px 2px 5px black;
 }
 
 #tickets-text{
@@ -27,4 +35,8 @@
 
 .egg-intro{
   width:10%;
+}
+
+.play-game-btn {
+  margin-bottom: 15px;
 }
