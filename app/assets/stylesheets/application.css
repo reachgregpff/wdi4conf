@@ -13,13 +13,13 @@
  *= require_tree .
  *= require_self
  */
+
  body {
      background-image: url('/yarra_river_melbourne_australia_skyline_vintage_hd-wallpaper-171343.jpg');
      background-repeat: no-repeat;
      background-attachment: fixed;
      background-position: center;
  }
-
 
 .navbar {      /* this is to remove the mysterious space under the navbar and above the main image */
     margin-bottom: 0;
