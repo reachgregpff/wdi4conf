@@ -9,8 +9,8 @@
 }
 
 .profile-summary{
-  font-size: 15px;
-  font-style: italic;
+  font-size: 1em;
+  font-family: AnonymousPro;
 }
 
 
@@ -21,10 +21,18 @@
   box-sizing: border-box;
 }
 
+#about-speakers::after {
+  content: '';
+  display: block;
+  box-shadow: 0 0.9px 0 0.2px white;
+  margin-top: 2rem;
+  margin-bottom: 80px;
+}
+
 .color-list {
   display: flex;
 
-  background: hsl(4,99%,66%);
+  background: hsla(0, 100%, 7%, 0.28);
   /*
     On small displays we want each .color stacked.
     Flexbox let's us determine stacking direction via

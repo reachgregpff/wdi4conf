@@ -56,6 +56,14 @@ p{
     /*background-color: #FF0;*/
 }
 
+.wrapper1::after {
+  content: '';
+  display: block;
+  box-shadow: 0 0.9px 0 0.2px white;
+  margin-top: 2rem;
+  margin-bottom: 80px;
+}
+
 #twitter-feed {
   margin-bottom: 2px;
 }
@@ -169,9 +177,10 @@ section#timeline article div.inner p {
   padding: 15px;
   margin: 0;
   font-size: 14px;
-  background: #fff;
-  color: #656565;
+  background: rgba(0, 0, 0, 0.32);
+  color: white;
   border-radius: 0 0 6px 6px;
+  font-family: Hack;
 }
 section#timeline article:nth-child(2n+2) div.inner {
   float: right;
@@ -186,10 +195,34 @@ section#timeline article:nth-child(1) div.inner h2:after {
   background: #e74c3c;
 }
 section#timeline article:nth-child(2) div.inner h2 {
-  background: #2ecc71;
+  background: #e74c3c;
 }
 section#timeline article:nth-child(2) div.inner h2:after {
-  background: #2ecc71;
+  background: #e74c3c;
+}
+section#timeline article:nth-child(3) div.inner h2 {
+  background: #e74c3c;
+}
+section#timeline article:nth-child(3) div.inner h2:after {
+  background: #e74c3c;
+}
+section#timeline article:nth-child(4) div.inner h2 {
+  background: #e74c3c;
+}
+section#timeline article:nth-child(4) div.inner h2:after {
+  background: #e74c3c;
+}
+section#timeline article:nth-child(5) div.inner h2 {
+  background: #e74c3c;
+}
+section#timeline article:nth-child(5) div.inner h2:after {
+  background: #e74c3c;
+}
+section#timeline article:nth-child(6) div.inner h2 {
+  background: #e74c3c;
+}
+section#timeline article:nth-child(6) div.inner h2:after {
+  background: #e74c3c;
 }
 /*timeline -------------------------------------*/
 
@@ -222,6 +255,19 @@ footer.footer {
       color: white;
       font-size: 2em;
       margin-bottom: 9px;
+  }
+
+  #about-speakers {
+
+  }
+
+  .color-list {
+    height: 100vh;
+  }
+
+  .color .col-md-8 img {
+    width: 20%;
+    margin-left: 159px;
   }
 }
 
