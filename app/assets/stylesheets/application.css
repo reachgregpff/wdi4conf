@@ -243,7 +243,7 @@ footer.footer {
   }
 
   .app-info {
-    right: -5%;
+    right: auto;
   }
 
   .ticket-heading-style {
@@ -272,11 +272,11 @@ footer.footer {
 }
 
 /* Medium devices (desktops, 992px and up) */
-@media (min-width: @screen-md-min) {
+/*@media (min-width: @screen-md-min) {
 
-}
+}*/
 
 /* Large devices (large desktops, 1200px and up) */
-@media (min-width: @screen-lg-min) {
+/*@media (min-width: @screen-lg-min) {
 
-}
+}*/
