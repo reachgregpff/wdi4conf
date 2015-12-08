@@ -4,17 +4,17 @@
 
 #pricing-table, #pricing{
   text-align: center;
+  background-color: rgba(239, 5, 5, 0.35)
 }
 
 #seats{
   text-align: center;
-  background-color: white;
-  height: 500px;
+  /*height: 500px;*/
+  background-color: rgba(0, 0, 0, 0.5);
 }
 
 #pricing{
   text-align: center;
-  border: 1px solid white;
   height: 500px;
 }
 
@@ -25,4 +25,17 @@
 
 .eggs-legend-text{
   text-align: left;
+}
+
+#seat-game-title{
+  background-color: red;
+  border: 1px solid white;
+  margin-left: 20%;
+  margin-right: 20%;
+}
+
+#seat-tile-gold, #seat-tile-silver, #seat-tile-bronze{
+  width: 3%;
+  border: 0px;
+  display: inline-block;
 }
