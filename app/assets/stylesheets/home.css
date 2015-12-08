@@ -16,7 +16,7 @@ img {
     z-index:3;
     position:absolute;
     color:white;
-    font-size:20em%;
+    font-size:20%;
     font-weight:bold;
     left:20%;
     top:50%;
@@ -39,7 +39,8 @@ img {
 
 #wdi-conf-text{
   color: white;
-  font-size: 19em;
+  font-size: 2086%;
+  margin-bottom: 9px;
 }
 
 #welcome{
@@ -62,6 +63,13 @@ img {
 
 .app-info {
   top: 21%;
-  right: -5%;
+  right: -25%;
   text-align: center;
+  margin-bottom: 111px;
+}
+
+.contact-us {
+    background-color: rgba(255, 186, 0, 0.73);
+    width: 46%;
+    margin-left: 25px;
 }

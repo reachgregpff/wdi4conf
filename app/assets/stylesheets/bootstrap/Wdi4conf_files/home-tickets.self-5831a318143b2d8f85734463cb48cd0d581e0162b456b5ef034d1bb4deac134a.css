@@ -1,0 +1,42 @@
+#tickets-page{
+  position: relative;
+}
+
+#tickets-heading{
+  top: 5%;
+  left: 10%;
+}
+
+.ticket-heading-style {
+  position: relative;
+  margin-bottom: 5%;
+  margin-top: 5%;
+  background-color: rgba(0, 0, 0, 0.5);
+  /* border-radius: 1%; */
+  box-shadow: 1px 2px 5px black;
+}
+
+#tickets-text{
+  color: white;
+  font-size: 2em;
+}
+
+.egg-box{
+  border-width: 2px;
+  border-style: solid;
+  border-color: white;
+}
+
+.egg-intro-box{
+  border-width: 1px;
+  border-style: dotted;
+  border-color: white;
+}
+
+.egg-intro{
+  width:10%;
+}
+
+.play-game-btn {
+  margin-bottom: 15px;
+}

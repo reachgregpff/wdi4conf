@@ -1,0 +1,21 @@
+#contacts-page{
+  position: relative;
+}
+
+/*#contacts-heading{
+  position: absolute;
+  top: 5%;
+  left: 10%;
+}*/
+
+#tickets-text{
+  font-size: 15em;
+}
+
+.conf-map {
+  width: 100%;
+  height: 60vh;
+  display: inline-block;
+  vertical-align: top;
+  overflow: hidden;
+}
