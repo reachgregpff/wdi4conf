@@ -34,11 +34,6 @@ h2{
   color: gold;
 }
 
-h3{
-  color:blue;
-  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px white;
-}
-
 h4{
   color:gold;
 }
@@ -60,6 +55,19 @@ p{
     /*background-color: #99FFFF;*/
     /*background-color: #FF0;*/
 }
+
+#twitter-feed {
+  margin-bottom: 2px;
+}
+
+#twitter-feed::after {
+  content: '';
+  display: block;
+  box-shadow: 0 0.9px 0 0.2px white;
+  margin-top: 2rem;
+  margin-bottom: 80px;
+}
+
 
 /*timeline---------------*/
 section#timeline {
@@ -153,7 +161,7 @@ section#timeline article div.inner h2:after {
   position: absolute;
   top: 20px;
   right: -5px;
-    width: 10px; 
+    width: 10px;
     height: 10px;
   -webkit-transform: rotate(-45deg);
 }
@@ -188,7 +196,7 @@ section#timeline article:nth-child(2) div.inner h2:after {
 footer.footer {
     background-color: rgb(0, 0, 0);
     border-top: dashed 3px orange;
-    margin-top: 64px;     
+    margin-top: 64px;
 }
 
 /* Extra small devices (phones, less than 768px) */
@@ -226,4 +234,3 @@ footer.footer {
 @media (min-width: @screen-lg-min) {
 
 }
-
