@@ -11,6 +11,7 @@
         <!--<h3>...where impossible is nothing.</h3> -->
         <h4>45 William St, Melbourne</h4>
         <h4>Friday 10:00 to 16:00</h4>
+        <h4 id="time"></h4>
         <a href="/seats"><button class="btn btn-info">Buy Ticket</button></a>
         <br><br><br><br>
         <a href="#speakers">
@@ -43,9 +44,10 @@ curtain = $('#curtain').animate({ height: 50 },{duration: 8000});
           <h2 class="name">Asep Norzai </h2>
             <div class="col-md-8">
               <img src="/speakers/bono.png" onmouseover="this.src='/speakers/bono.png'" onmouseout="this.src='/speakers/bono.png'" class="photo" alt="">
+              <p>A Ninjaut labore et dolore magna aliqua.</p>
             </div>
             <ul class="details">
-              <p class="profile-summary">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+              <p class="profile-summary">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
           </ul>
         </section>
 
@@ -53,6 +55,7 @@ curtain = $('#curtain').animate({ height: 50 },{duration: 8000});
           <h2 class="name">Gregory Fernandes </h2>
             <div class="col-md-8">
               <img src="/speakers/greg.png" onmouseover="this.src='/speakers/greg2.png'" onmouseout="this.src='/speakers/greg.png'" class="photo" alt="">
+              <p>A Ninjaut labore et dolore magna aliqua.</p>
             </div>
             <ul class="details">
               <p class="profile-summary">Greg is a Java Developer, an ethusiastic web developer and an avid sketcher 'n' fine artist. When he's not hitting keys, he is dabbling with paint. He has 10,500 followers on his Fb art page in 3 months.</p>
@@ -63,9 +66,10 @@ curtain = $('#curtain').animate({ height: 50 },{duration: 8000});
           <h2 class="name">Bono </h2>
             <div class="col-md-8">
               <img src="/speakers/bono.png" onmouseover="this.src='/speakers/bono.png'" onmouseout="this.src='/speakers/bono.png'" class="photo" alt="">
+              <p>A Ninjaut labore et dolore magna aliqua.</p>
             </div>
             <ul class="details">
-              <p class="profile-summary">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+              <p class="profile-summary">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
           </ul>
         </section>
 
@@ -73,9 +77,10 @@ curtain = $('#curtain').animate({ height: 50 },{duration: 8000});
           <h2 class="name">Ravi C </h2>
             <div class="col-md-8">
               <img src="/speakers/bono.png" onmouseover="this.src='/speakers/bono.png'" onmouseout="this.src='/speakers/bono.png'" class="photo" alt="">
+              <p>A Ninjaut labore et dolore magna aliqua.</p>
             </div>
             <ul class="details">
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
           </ul>
         </section>
 
@@ -83,9 +88,10 @@ curtain = $('#curtain').animate({ height: 50 },{duration: 8000});
           <h2 class="name">Ashton S</h2>
           <div class="col-md-8">
             <img src="speakers/ashton.png" onmouseover="this.src='/speakers/ashton2.png'" onmouseout="this.src='/speakers/ashton.png'"  class="photo" alt="">
+            <p>A Ninjaut labore et dolore magna aliqua.</p>
         </div>
           <ul class="details">
-            <p class="profile-summary">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            <p class="profile-summary">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
           </ul>
         </section>
 
@@ -339,23 +345,30 @@ curtain = $('#curtain').animate({ height: 50 },{duration: 8000});
 <!--CONTACT US -->
 <div class="container" id="contacts-page">
     <!-- <img src="/image-city.jpg" class="img-responsive" id="tickets-image" alt="Responsive image"> -->
-        <div id="map-box" class="col-md-6">
-          <div class='conf-map'></div>
-        </div>
-        <div id="contacts-heading col-md-12">
-          <div class="contact-us col-md-6">
+      <h2>Contact Us</h2>
+        <div id=" col-md-12">
+          <!-- <div class="contact-us">
             <h3 id="tickets-text">CONTACT</h3>
             <h4>WDI4 Famous 5</h4>
             <h4>45 William Street,</h4>
             <h4>Melbourne, VIC 3000</h4>
             <h4>Phone: 04 9999 9999</h4>
+          </div> -->
+          <div class="twitter col-md-6" >
+            <a class="twitter-timeline" href="https://twitter.com/wdi_conf" data-widget-id="674074414707699712">Tweets by @wdi_conf</a>
+            <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+
+            <h1>VOTE For The Best</h1>
+            <div class="col-md-10">
+              <button class="btn btn-warning">Blah?</button>
+              <button class="btn btn-warning">Bablah?</button>
+            </div>
           </div>
-          <div class="col-md-6" >
-              <center>
-                <a class="twitter-timeline" href="https://twitter.com/wdi_conf" data-widget-id="674074414707699712">Tweets by @wdi_conf</a>
-          <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
-              </center>
-          </div>
+
+        </div>
+
+        <div id="map-box" class="col-md-4">
+          <div class='conf-map'></div>
         </div>
 
     </div>
