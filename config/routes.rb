@@ -55,18 +55,23 @@ Rails.application.routes.draw do
 
   get '/' => 'pages#home'
 
-  get '/seats' => 'pages#seats'
+  get '/seats' => 'seats#list'
 
   get '/payment' => 'pages#payment'
 
   get '/tickets' => 'pages#tickets'
 
-  
-  # post '/charge' => 'charges#new'
-  
-  # get  '/chargeComplete' => 'charges'
-resources :charges
+  resources :seats
 
+  resources :eggs
+
+  resources :charges
+
+
+  namespace :api do
+    resources :seats, only: [:index]
+    resources :eggs, only: [:index]
+  end
 
 
 

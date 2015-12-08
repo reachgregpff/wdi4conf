@@ -4,11 +4,10 @@
 
 #my-tickets{
   margin: 20px;
-  border: 5px solid gold;
+  background-color: rgba(0, 0, 0, 0.5);
 }
 
 #qr-code-title{
-  background: gold;
 }
 
 .ticket-text{
