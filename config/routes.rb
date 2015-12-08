@@ -62,7 +62,9 @@ Rails.application.routes.draw do
   get '/tickets' => 'pages#tickets'
 
   
-
+  # post '/charge' => 'charges#new'
+  
+  # get  '/chargeComplete' => 'charges'
 resources :charges
 
 
