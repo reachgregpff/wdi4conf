@@ -35,7 +35,7 @@ h2{
 }
 
 h3{
-  color:blue;
+  color:white;
   text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px white;
 }
 
@@ -44,7 +44,7 @@ h4{
 }
 
 h5{
-  color:aqua;
+  color:gold;
   text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px white;
 }
 h6{
