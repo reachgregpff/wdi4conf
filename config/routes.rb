@@ -62,15 +62,12 @@ Rails.application.routes.draw do
   get '/tickets' => 'pages#tickets'
 
   resources :seats
-
-  resources :eggs
   
   resources :charges
 
 
   namespace :api do
     resources :seats, only: [:index]
-    resources :eggs, only: [:index]
   end
 
 

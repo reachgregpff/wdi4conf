@@ -10,31 +10,28 @@
 #seats{
   text-align: center;
   /*height: 500px;*/
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(101, 42, 105, 0.5);
 }
 
 #pricing{
   text-align: center;
-  height: 500px;
 }
 
-.eggs-legend{
-  width: 50%;
-  float: right;
+'#eggs-n-chairs-images .col-md-1'{
+  width: 20%;
+  border: 1px solid red;
 }
 
-.eggs-legend-text{
-  text-align: left;
+'#eggs-n-chairs-legends .col-md-1'{
+  text-align: center;
 }
 
 #seat-game-title{
-  background-color: red;
-  border: 1px solid white;
   margin-left: 20%;
   margin-right: 20%;
 }
 
-#seat-tile-gold, #seat-tile-silver, #seat-tile-bronze{
+.seat-tile {
   width: 3%;
   border: 0px;
   display: inline-block;

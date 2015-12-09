@@ -54,6 +54,10 @@ p{
   color: white;
 }
 
+tbody{
+  color:white;
+}
+
 .wrapper {
     width: 100%;
     /*background-color: #800;*/
