@@ -67,3 +67,9 @@ img {
   text-align: center;
   margin-bottom: 111px;
 }
+
+.contact-us {
+    background-color: rgba(255, 186, 0, 0.73);
+    width: 46%;
+    margin-left: 25px;
+}

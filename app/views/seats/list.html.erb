@@ -1,0 +1,180 @@
+
+<br>
+<%=puts @free_seats_list%>
+
+<div class="wrapper">
+
+  <div class="container-fluid" id="legend">
+    <div class="row">
+
+      <div class="col-md-1">
+        <img src="/eggs/egg-100-discount.png"  class="eggs-legend">
+      </div>
+      <div class="col-md-2">
+        <p  class="eggs-legend-text"><--FREE Ticket!!</p>
+      </div>
+      <div class="col-md-1">
+        <img src="/eggs/egg-50-discount.png"  class="eggs-legend">
+      </div>
+      <div class="col-md-2">
+        <p  class="eggs-legend-text"><--50% Discount</p>
+      </div>
+      <div class="col-md-1">
+        <img src="/eggs/egg-25-discount.png"  class="eggs-legend">
+      </div>
+      <div class="col-md-2">
+        <p  class="eggs-legend-text"><--25% Discount</p>
+      </div>
+
+      <div class="col-md-3" id="pricing-legend">
+        <center>
+          <p id="pricing-title">10 or more tickets = 10% discount</p>
+          <p id="pricing-title">5 or more tickets = 5% discount</p>
+        <center>
+      </div>
+    </div>
+  </div>
+
+  <div class="container-fluid" id="seats-enclosure">
+    <div class="row">
+      <div class="col-md-9" id="seats">
+        <h4 id="seat-game-title">MAIN STAGE</h4>
+
+        <center><h3>Gold Seats - $80</h3></center>
+        <%for i in 1..40%>
+          <div id="seat-tile-gold">
+            <%if @seats[i-1].status == "available"%>
+              <img src="chairs/armchair-green.png" class="gold" data-id="<%=i%>">
+            <%else%>
+              <img src="chairs/armchair-red.png" class="gold" data-id="<%=i%>">
+            <%end%>
+          </div>
+          <%if i%20 == 0%>
+            <br>
+          <%end%>
+        <%end%>
+
+        <center><h3>Silver Seats - $60</h3></center>
+        <%for i in 41..100%>
+          <div id="seat-tile-silver">
+            <%if @seats[i-1].status == "available"%>
+              <img src="chairs/armchair-green.png" class="gold" data-id="<%=i%>">
+            <%else%>
+              <img src="chairs/armchair-red.png" class="gold" data-id="<%=i%>">
+            <%end%>
+          </div>
+          <%if i%20 == 0%>
+            <br>
+          <%end%>
+        <%end%>
+
+        <center><h3>Bronze Seats - $40</h3></center>
+        <%for i in 101..200%>
+          <div id="seat-tile-bronze">
+            <%if @seats[i-1].status == "available"%>
+              <img src="chairs/armchair-green.png" class="gold" data-id="<%=i%>">
+            <%else%>
+              <img src="chairs/armchair-red.png" class="gold" data-id="<%=i%>">
+            <%end%>
+          </div>
+          <%if i%20 == 0%>
+            <br>
+          <%end%>
+        <%end%>
+
+        <br><br>
+
+
+      </div>
+      <div class="col-md-3" id="pricing">
+        <center>
+          <h3 id="pricing-title">PRICING</h3>
+        <center>
+      </div>
+    </div>
+  </div>
+
+
+</div>
+
+
+
+<br><br>
+<center>
+  <a href="/payment">
+    <button id="go-to-payment" type="button" class="btn btn-warning play-game-btn">PROCEED TO PAYMENT</button>
+  </a>
+</center>
+
+
+<script>
+$('#seat-tile-gold, #seat-tile-silver, #seat-tile-bronze').on('click', function(){
+
+  var that = this;
+
+  var options = {
+
+      type: 'get',
+      url: '/api/eggs',
+      dataType: 'json',
+      data: { }
+  };
+
+  $.ajax(options).done(function(data) {
+
+    //console.log(data);   //use this to test api call
+    eggsSeatArray = [];
+    eggsColoursArray = []
+
+    $.each( data, function (index, egg) {
+      //console.log(egg);
+      eggsSeatArray.push(egg.seat);
+      eggsColoursArray.push(egg.colour);
+    });
+
+    //console.log(eggsSeatArray);
+    //console.log(eggsColoursArray);
+
+    chairImage = $(that).find('img');
+    chairColour = $(that).find('img').attr('src');
+    chairId = $(that).find('img').attr('data-id')
+    //console.log($(that).find('img').attr('src'));
+    //console.log($(that).find('img').attr('data-id'));
+
+    //find out if this id is in the easter egg seats
+    indexInEggsArray = eggsSeatArray.indexOf(parseInt(chairId));
+
+    if(indexInEggsArray >= 0 && chairColour.indexOf('egg') < 0 ) {
+      if(eggsColoursArray[indexInEggsArray] == "gold"){
+        chairImage.attr('src', "/eggs/egg-100-discount.png");
+      } else if(eggsColoursArray[indexInEggsArray] == "red"){
+        chairImage.attr('src', "/eggs/egg-50-discount.png");
+      } else if(eggsColoursArray[indexInEggsArray] == "green"){
+        chairImage.attr('src', "/eggs/egg-25-discount.png");
+      }
+    }else if(chairColour.indexOf('green') > 0 ){
+      chairImage.attr('src', '/chairs/armchair-yellow.png');
+    }else if(chairColour.indexOf('yellow') > 0  ||   chairColour.indexOf('egg') > 0){
+      chairImage.attr('src', '/chairs/armchair-green.png');
+    }
+  });
+
+});
+
+$('#go-to-payment').on('click', function(){
+  console.log("in proceed to payment");
+
+  var options = {
+
+    type: 'get',
+    url: '/api/eggs',
+    dataType: 'json',
+    data: { }
+  };
+
+
+
+});
+
+
+</script>
