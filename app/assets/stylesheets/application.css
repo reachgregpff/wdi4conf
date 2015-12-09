@@ -25,10 +25,19 @@ html {
      background-position: center;
   padding: 90px 0 0 0;
 }
- }
 
 .navbar {      /* this is to remove the mysterious space under the navbar and above the main image */
     margin-bottom: 0;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+}
+
+a::focus a::hover {
+  color: gray;
+  text-decoration: none;
 }
 
 h1{
@@ -62,6 +71,16 @@ p{
 
 tbody{
   color:white;
+}
+
+/***************************LOGO*****************************************/
+img#header-logo {
+    width: 100px;
+    margin-left: -4px;
+}
+
+.arrow img {
+
 }
 
 .wrapper {
@@ -247,6 +266,10 @@ footer.footer {
     margin-top: 64px;
 }
 
+footer h4 {
+  color: white;
+}
+
 .newsletter {
   margin-left: -22px;
 }
@@ -258,7 +281,7 @@ footer.footer {
 input#mc-embedded-subscribe {
     margin: 0px;
 }
-/**********************NewsLetter******************************/
+
 #mc_embed_signup .button {
   background-color: rgba(206, 53, 47, 0.8);
 }
@@ -286,6 +309,8 @@ input#mc-embedded-subscribe {
       color: white;
       font-size: 2em;
       margin-bottom: 9px;
+      width: 100%;
+      margin-left: 10px;
   }
 
   .wrapper {
@@ -307,6 +332,7 @@ input#mc-embedded-subscribe {
 
   h4#time {
     margin-left: 110px;
+    width: 46%;
   }
 
   .col-md-6.app-info h4 {
