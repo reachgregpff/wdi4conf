@@ -278,6 +278,10 @@ input#mc-embedded-subscribe {
       margin-bottom: 9px;
   }
 
+  .wrapper {
+    margin-left: -38px;
+  }
+
   #about-speakers {
 
   }
@@ -293,9 +297,9 @@ input#mc-embedded-subscribe {
 }
 
 /* Medium devices (desktops, 992px and up) */
-/*@media (min-width: @screen-md-min) {
-
-}*/
+@media (max-width: 992px) {
+  
+}
 
 /* Large devices (large desktops, 1200px and up) */
 /*@media (min-width: @screen-lg-min) {
