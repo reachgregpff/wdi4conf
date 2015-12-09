@@ -13,6 +13,10 @@
  *= require_tree .
  *= require_self
  */
+html {
+  /*transition: 0.5s;*/
+  transition-delay: 3s!important;
+}
 
  body {
      background-image: url('/yarra_river_melbourne_australia_skyline_vintage_hd-wallpaper-171343.jpg');
