@@ -297,18 +297,26 @@ input#mc-embedded-subscribe {
   }
 
   .color-list {
-    height: 100vh;
+    height: 187vh;
   }
 
   .color .col-md-8 img {
     width: 20%;
     margin-left: 159px;
   }
+
+  h4#time {
+    margin-left: 110px;
+  }
+
+  .col-md-6.app-info h4 {
+    margin-left: 99px;
+  }
 }
 
 /* Medium devices (desktops, 992px and up) */
 @media (max-width: 992px) {
-  
+
 }
 
 /* Large devices (large desktops, 1200px and up) */
