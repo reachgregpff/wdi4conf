@@ -19,6 +19,8 @@
      background-repeat: no-repeat;
      background-attachment: fixed;
      background-position: center;
+  padding: 90px 0 0 0;
+}
  }
 
 .navbar {      /* this is to remove the mysterious space under the navbar and above the main image */
