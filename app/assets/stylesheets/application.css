@@ -257,6 +257,36 @@ section#timeline article:nth-child(6) div.inner h2 {
 section#timeline article:nth-child(6) div.inner h2:after {
   background: #e74c3c;
 }
+section#timeline article:nth-child(7) div.inner h2 {
+  background: #e74c3c;
+}
+section#timeline article:nth-child(7) div.inner h2:after {
+  background: #e74c3c;
+}
+section#timeline article:nth-child(8) div.inner h2 {
+  background: #e74c3c;
+}
+section#timeline article:nth-child(8) div.inner h2:after {
+  background: #e74c3c;
+}
+section#timeline article:nth-child(9) div.inner h2 {
+  background: #e74c3c;
+}
+section#timeline article:nth-child(9) div.inner h2:after {
+  background: #e74c3c;
+}
+section#timeline article:nth-child(10) div.inner h2 {
+  background: #e74c3c;
+}
+section#timeline article:nth-child(10) div.inner h2:after {
+  background: #e74c3c;
+}
+section#timeline article:nth-child(11) div.inner h2 {
+  background: #e74c3c;
+}
+section#timeline article:nth-child(11) div.inner h2:after {
+  background: #e74c3c;
+}
 /*timeline -------------------------------------*/
 
 /***********************Footer *********************************/
@@ -302,7 +332,7 @@ input#mc-embedded-subscribe {
 
   .ticket-heading-style {
     top: 5%;
-    left: 10%;
+    left: 37px;
   }
 
   #wdi-conf-text {
@@ -330,19 +360,61 @@ input#mc-embedded-subscribe {
     margin-left: 159px;
   }
 
-  h4#time {
+  /*h4#time {
     margin-left: 110px;
     width: 46%;
-  }
+  }*/
 
-  .col-md-6.app-info h4 {
-    margin-left: 99px;
+  /*.col-md-6.app-info h4 {
+    margin-left: 29%;
+  }*/
+
+  .sponsors img {
+    width: 30%;
+    margin-left: 186px;
   }
 }
 
 /* Medium devices (desktops, 992px and up) */
-@media (max-width: 992px) {
+@media (min-width: 992px) {
+  .sponsors img {
+    width: 50%;
+    margin-left: 130px;
+  }
 
+  /*h4#time {
+    margin-left: 256px;
+  }*/
+
+  #map-box {
+    margin-left: 4px;
+  }
+
+  div#map-box {
+    width: 90.333333%;
+  }
+
+  .color-list {
+    height: 33vh;
+  }
+
+  .color .col-md-8 img {
+      width: 34%;
+      margin-left: 28px;
+  }
+
+  /*.ticket-heading-style {
+    top: 5%;
+    left: -2px;
+  }*/
+
+  .twitter {
+    width: 48%;
+  }
+
+  .col-md-6.app-info h4 {
+    margin-left: 252px;
+  }
 }
 
 /* Large devices (large desktops, 1200px and up) */
