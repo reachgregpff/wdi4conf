@@ -13,12 +13,18 @@
  *= require_tree .
  *= require_self
  */
+html {
+  /*transition: 0.5s;*/
+  transition-delay: 3s!important;
+}
 
  body {
      background-image: url('/yarra_river_melbourne_australia_skyline_vintage_hd-wallpaper-171343.jpg');
      background-repeat: no-repeat;
      background-attachment: fixed;
      background-position: center;
+  padding: 90px 0 0 0;
+}
  }
 
 .navbar {      /* this is to remove the mysterious space under the navbar and above the main image */
@@ -52,6 +58,10 @@ h6{
 }
 p{
   color: white;
+}
+
+tbody{
+  color:white;
 }
 
 .wrapper {
@@ -278,24 +288,36 @@ input#mc-embedded-subscribe {
       margin-bottom: 9px;
   }
 
+  .wrapper {
+    margin-left: -38px;
+  }
+
   #about-speakers {
 
   }
 
   .color-list {
-    height: 100vh;
+    height: 187vh;
   }
 
   .color .col-md-8 img {
     width: 20%;
     margin-left: 159px;
   }
+
+  h4#time {
+    margin-left: 110px;
+  }
+
+  .col-md-6.app-info h4 {
+    margin-left: 99px;
+  }
 }
 
 /* Medium devices (desktops, 992px and up) */
-/*@media (min-width: @screen-md-min) {
+@media (max-width: 992px) {
 
-}*/
+}
 
 /* Large devices (large desktops, 1200px and up) */
 /*@media (min-width: @screen-lg-min) {
