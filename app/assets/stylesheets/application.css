@@ -13,12 +13,18 @@
  *= require_tree .
  *= require_self
  */
+html {
+  /*transition: 0.5s;*/
+  transition-delay: 3s!important;
+}
 
  body {
      background-image: url('/yarra_river_melbourne_australia_skyline_vintage_hd-wallpaper-171343.jpg');
      background-repeat: no-repeat;
      background-attachment: fixed;
      background-position: center;
+  padding: 90px 0 0 0;
+}
  }
 
 .navbar {      /* this is to remove the mysterious space under the navbar and above the main image */
@@ -52,6 +58,10 @@ h6{
 }
 p{
   color: white;
+}
+
+tbody{
+  color:white;
 }
 
 .wrapper {
