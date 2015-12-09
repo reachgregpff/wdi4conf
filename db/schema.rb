@@ -25,14 +25,5 @@ ActiveRecord::Schema.define(version: 20151204124645) do
     t.boolean  "pendingpayment"
     t.datetime "created_at",     null: false
     t.datetime "updated_at",     null: false
-  end
-
-  create_table "users", force: :cascade do |t|
-    t.string   "password_digest"
-    t.string   "email"
-    t.integer  "ticket_id"
-    t.datetime "created_at",      null: false
-    t.datetime "updated_at",      null: false
-  end
 
 end
