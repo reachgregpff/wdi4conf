@@ -25,13 +25,12 @@ ActiveRecord::Schema.define(version: 20151207124452) do
   end
 
   create_table "seats", force: :cascade do |t|
-    t.integer  "seat_id"
-    t.string   "name"
+    t.string   "userid"
     t.string   "status"
-    t.text     "details"
     t.integer  "price"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.boolean  "pendingpayment"
+    t.datetime "created_at",     null: false
+    t.datetime "updated_at",     null: false
   end
 
 end
