@@ -4,26 +4,42 @@
 </center>
 <br>
 
-<script src="https://checkout.stripe.com/checkout.js"></script>
-<!-- 
 <center>
-  <button id="customButton" class="btn btn-primary btn-lg">Make Payment</button>
-</center> -->
-<center> 
-    <%= form_tag charges_path do %>
-      <article>
-        <% if flash[:error].present? %>
-          <div id="error_explanation">
-            <p><%= flash[:error] %></p>
-          </div>
-        <% end %>
-      </article>
-
-      <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
-              data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
-              data-description="Standard Ticket: 1"
-              data-amount="2000"
-              data-currency="aud"
-              data-locale="auto"></script>
-    <% end %>
+ <%= form_tag charges_path, id: 'stripeForm' do -%>
+   <script src="https://checkout.stripe.com/checkout.js"></script>
+   <article>
+     <%= label_tag 'amount', 'To Pay', class: 'amount' %>
+     <%= label_tag 'amount', "$#{@amount}.00", class: "amount-figure" %>
+   </article> <br>
+   <button id="stripe-button">pay by card</button>
+   <%= hidden_field_tag 'stripeToken' %>
+   <%= hidden_field_tag 'stripeEmail' %>
+   <%= hidden_field_tag 'stripeAmount' %>
+ 
+   <script>
+     var handler = StripeCheckout.configure({
+       key: "<%= Rails.configuration.stripe[:publishable_key] %>",
+       token: function (token, args) {
+         $("#stripeToken").val(token.id);
+         $("#stripeEmail").val(token.email);
+         $("#stripeAmount").val('<%= @amount %>');
+         $("#stripeForm").submit();
+       }
+     });
+ 
+     $('#stripe-button').on('click', function (e) {
+       // Open Checkout with further options
+       handler.open({
+         name: 'Customer name',
+         description: 'WDI4 Conf Ticket',
+         amount: <%= @amount * 100 %>
+       });
+     e.preventDefault();
+     });
+ 
+     $(window).on('popstate', function() {
+       handler.close();
+     });
+   </script>
+ <% end %>
 </center>

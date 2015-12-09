@@ -2,6 +2,7 @@ class SeatsController < ApplicationController
 
   def list
     @seats = Seat.all
+    @amount = 20
   end
 
 
@@ -9,9 +10,9 @@ class SeatsController < ApplicationController
   
   def create
     # Amount in cents
-    @amount = 500
+    @amount = params[:stripeAmount].to_i * 100
     @email = params[:stripeEmail]
-    @description = params[:StripeDescription]
+
     customer = Stripe::Customer.create(
       :email => params[:stripeEmail],
       :source  => params[:stripeToken]
@@ -20,8 +21,8 @@ class SeatsController < ApplicationController
     charge = Stripe::Charge.create(
       :customer    => customer.id,
       :amount      => @amount,
-      :description => 'Rails Stripe customer',
-      :currency    => 'usd'
+      :description => 'Wdi Conf Stripe customer',
+      :currency    => 'aud'
     )
 
     rescue Stripe::CardError => e

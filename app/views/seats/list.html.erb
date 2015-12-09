@@ -154,12 +154,14 @@
         <% end %>
       </article>
 
-      <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+      <script id="dfdfdf" src="https://checkout.stripe.com/checkout.js" class="stripe-button"
               data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
               data-description="Standard Ticket: 1"
-              data-amount="2000"
+              data-amount="<%= @amount * 100 %>"
               data-currency="aud"
-              data-locale="auto"></script>
+              data-locale="auto">
+                
+              </script>
     <% end %>
 
 
@@ -167,6 +169,13 @@
 
 
 <script>
+
+// $("#grand-total td h5").on('change', function() {
+//   var value = $(this).val();
+//   console.log("the value is "+value);
+//   $('#dfdfdf').attr('data-amount', value);
+// });
+
 $('.seat-tile').on('click', function(){
 
   var that = this;
