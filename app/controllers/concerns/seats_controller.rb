@@ -25,7 +25,8 @@ class SeatsController < ApplicationController
   def create
     # Amount in cents
     @amount = 500
-
+    @email = params[:stripeEmail]
+    @description = params[:StripeDescription]
     customer = Stripe::Customer.create(
       :email => params[:stripeEmail],
       :source  => params[:stripeToken]
