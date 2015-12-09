@@ -64,7 +64,7 @@ Rails.application.routes.draw do
   resources :seats
 
   resources :eggs
-  
+
   resources :charges
 
 
