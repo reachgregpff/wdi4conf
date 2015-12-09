@@ -51,7 +51,7 @@ $('document').ready(function(){
 
   function startTime() {
     var time = document.getElementById("time");
-    var date2 = new Date('2015-12-11T05:10:00');
+    var date2 = new Date('2015-12-11T08:00:00');
     var date1 = new Date();
     var diff = new Date(date2.getTime() - date1.getTime());
     var years = diff.getUTCFullYear() - 1970; // Gives difference as year
