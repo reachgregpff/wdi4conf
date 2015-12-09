@@ -144,9 +144,25 @@
 
 <br><br>
 <center>
-  <a href="/payment">
-    <button id="go-to-payment" type="button" class="btn btn-danger play-game-btn">PROCEED TO PAYMENT</button>
-  </a>
+
+      <%= form_tag seats_path do %>
+      <article>
+        <% if flash[:error].present? %>
+          <div id="error_explanation">
+            <p><%= flash[:error] %></p>
+          </div>
+        <% end %>
+      </article>
+
+      <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+              data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
+              data-description="Standard Ticket: 1"
+              data-amount="2000"
+              data-currency="aud"
+              data-locale="auto"></script>
+    <% end %>
+
+
 </center>
 
 
@@ -261,6 +277,8 @@ $('.seat-tile').on('click', function(){
   });
 
 });
+
+
 
 $('#go-to-payment').on('click', function(){ //When user clicks on 'To payment'
 

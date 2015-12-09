@@ -62,7 +62,7 @@ Rails.application.routes.draw do
   get '/tickets' => 'pages#tickets'
 
   resources :seats
-  
+
   resources :charges
 
 

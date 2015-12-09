@@ -19,3 +19,16 @@
   vertical-align: top;
   overflow: hidden;
 }
+
+div#contacts-page h2 {
+   text-align: center;
+   margin-bottom: 25px;
+   color: white;
+   font-size: 3em;
+   margin-top: -37px;
+}
+
+.twitter button.btn.btn-warning {
+    padding: 3%;
+    margin-left: 115px;
+}

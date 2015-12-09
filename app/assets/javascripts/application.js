@@ -18,17 +18,81 @@
 
 $('document').ready(function(){
 
+  // Get the infobox for the map
+  var data = "WDI4 Famous 5</br> 45 William Street,</br> Melbourne, VIC 3000</br> Phone: 04 9999 9999";
+
+  // Adds the data to the content key
+  var infowindow = new google.maps.InfoWindow({
+    content: data
+  });
+
   var map = new google.maps.Map($('.conf-map')[0], {
     zoom: 15,
     center: { lat: -37.817954, lng: 144.959257}
   });
 
 
-  console.log(map);
+  // console.log(map);
 
   var marker = new google.maps.Marker({
     position: {lat: -37.817954, lng: 144.959257},
     map: map,
     title: "WDI4 Conf"
   })
+
+  // adds it to the infobox to this functions
+  var markerInfoBox = function () {
+      infowindow.open(map,marker);
+  }
+
+  // Calling the infobox function whenever the document loadsup
+  markerInfoBox();
+
+
+  function startTime() {
+    var time = document.getElementById("time");
+    var date2 = new Date('2015-12-11T05:10:00');
+    var date1 = new Date();
+    var diff = new Date(date2.getTime() - date1.getTime());
+    var years = diff.getUTCFullYear() - 1970; // Gives difference as year
+    var months = diff.getUTCMonth(); // Gives month count of difference
+    var days = diff.getUTCDate()-1; // Gives day count of difference
+
+    var hour = diff.getUTCHours()-1;
+    var minutes = diff.getUTCMinutes()-1;
+    if (diff.getUTCSeconds() <= 00) {
+      var seconds = 59;
+    } else {
+      var seconds = diff.getUTCSeconds()-1;
+    }
+    minutes = checkTime(minutes);
+    seconds = checkTime(seconds);
+    time.innerHTML = ("Till Event: " + months + "M " + days + "D " + hour + ":" + minutes + ":" + seconds);
+    var t = setTimeout(startTime, 500);
+  }
+
+  function checkTime(i) {
+      if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
+      return i;
+  }
+
+  startTime();
+
+  var $color = $( ".color" )
+  $color.mouseover(function() {
+    $(".col-md-8 p").hide();
+  }).mouseout(function() {
+    $(".col-md-8 p").show();
+  });
+
+  $color.mouseover(function() {
+    $(this).addClass('active');
+  }).mouseout(function() {
+    $(this).removeClass('active');
+  });
+
+
+  var $sectionActive = $('section.active');
+  var rgbaColor = "rgba(255, 0, 0, 0.5)";
+  $sectionActive.css("background-color", rgbaColor);
 });
