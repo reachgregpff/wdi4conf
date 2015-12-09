@@ -2,6 +2,51 @@
 #home{
 }
 
+/*************************CLOCK*************************************/
+h4#time {
+  font-size: 2em;
+  color: black;
+  background-color: rgb(255, 242, 0);
+  width: 47%;
+  margin-left: 193px;
+}
+
+.col-md-6.app-info h4 {
+    font-size: 2em;
+    color: white;
+    /* background-color: rgba(232, 201, 22, 0.74); */
+    width: 47%;
+    margin-left: 193px;
+}
+
+button.btn.buy-btn {
+    /*font-size: 2em;
+    width: 47%;
+    margin-left: 24px;
+    color: #FFFA1F;
+    background-color: transparent;
+    border-color: #FFFA1F;
+    border-width: 4px;
+    box-shadow: 2px -4px 1px black;*/
+
+    /*font-size: 2em;
+    width: 47%;
+    margin-left: 24px;
+    color: #FFFFFF;
+    background-color: #28D2FF;
+    border-color: #28D2FF;
+    border-width: 4px;
+    box-shadow: 1.8px 4.3px #077A98;*/
+
+    font-size: 2em;
+    width: 47%;
+    margin-left: 24px;
+    color: white;
+    background-color: transparent;
+    border-color: #28D2FF;
+    border-width: 4px;
+    box-shadow: 1.8px 4.3px #077A98;
+}
 
 img {
     /*background-image: url(pic_1.jpg); */
@@ -37,10 +82,10 @@ img {
   left: 8%;
 }
 
-#wdi-conf-text{
-  color: white;
-  font-size: 2086%;
-  margin-bottom: 9px;
+#wdi-conf-text {
+    color: white;
+    font-size: 1327%;
+    margin-bottom: 9px;
 }
 
 #welcome{
@@ -66,6 +111,39 @@ img {
   right: -25%;
   text-align: center;
   margin-bottom: 111px;
+}
+
+
+/*************************************SPONSORS************************************************/
+.container-fulid.sponsors {
+    margin-bottom: 148px;
+    color: white;
+}
+
+.sponsors h2 {
+    text-align: center;
+    margin-bottom: 25px;
+    color: white;
+    font-size: 3em;
+    margin-top: -37px;
+}
+
+.sponsors h1 {
+  text-shadow: none;
+}
+
+
+.sponsors::after {
+  content: '';
+  display: block;
+  box-shadow: 0 0.9px 0 0.2px white;
+  margin-top: 2rem;
+  margin-bottom: 80px;
+}
+
+/******************************MAP****************************************************************/
+div#map-box {
+    width: 48.333333%;
 }
 
 .contact-us {
