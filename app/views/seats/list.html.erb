@@ -1,31 +1,29 @@
 
 <br>
 <%=puts @free_seats_list%>
-
+<script> 
+  var subtotal=9000;
+</script>
 <div class="wrapper">
 
-  <div class="container-fluid" id="legend">
-    <div class="table">
       <div class="row" id="eggs-n-chairs-images">
         <div class="col-md-1"></div>
-        <div class="col-md-1"><img src="/eggs/egg-gold.png"></div>
-        <div class="col-md-1"><img src="/eggs/egg-red.png"></div>
-        <div class="col-md-1"><img src="/eggs/egg-green.png"></div>
-        <div class="col-md-1"></div>
-        <div class="col-md-1"><img src="/chairs/armchair-white.png"></div>
-        <div class="col-md-1"><img src="/chairs/armchair-yellow.png"></div>
-        <div class="col-md-1"><img src="/chairs/armchair-black.png"></div>
+        <div class="col-md-1"><img class="legend-icon" src="/eggs/egg-gold.png"></div>
+        <div class="col-md-1"><img class="legend-icon" src="/eggs/egg-red.png"></div>
+        <div class="col-md-1"><img class="legend-icon" src="/eggs/egg-green.png"></div>
+        <div class="col-md-1"><img class="legend-icon" src="/chairs/armchair-white.png"></div>
+        <div class="col-md-1"><img class="legend-icon" src="/chairs/armchair-yellow.png"></div>
+        <div class="col-md-1"><img class="legend-icon" src="/chairs/armchair-black.png"></div>
         <div class="col-md-1"></div>
       </div>
       <div class="row" id="eggs-n-chairs-legends">
         <div class="col-md-1"></div>
-        <center><div class="col-md-1"><p> FREE!</p></div></center>
-        <center><div class="col-md-1"><p> 50% OFF</p></div></center>
-        <center><div class="col-md-1"><p> 25% OFF</p></div></center>
-        <div class="col-md-1"></div>
-        <center><div class="col-md-1"><p> Available</p></div></center>
-        <center><div class="col-md-1"><p> Selected</p></div></center>
-        <center><div class="col-md-1"><p> Sold</p></div></center>
+        <div class="col-md-1"><p>FREE!</p></div>
+        <div class="col-md-1"><p>50% OFF</p></div>
+        <div class="col-md-1"><p>25% OFF</p></div>
+        <div class="col-md-1"><p>Available</p></div>
+        <div class="col-md-1"><p>Selected</p></div>
+        <div class="col-md-1"><p>Sold</p></div>
         <div class="col-md-1"></div>
       </div>
     </table>
@@ -33,7 +31,7 @@
 
   <div class="container-fluid" id="seats-enclosure">
     <div class="row">
-      <div class="col-md-8" id="seats">
+      <div class="col-md-7" id="seats">
         <!--<h4 id="seat-game-title">MAIN STAGE</h4>-->
 
         <center><h4>Gold Seats - $80</h4></center>
@@ -87,9 +85,9 @@
             <table class ="table">
               <thead>
                 <tr>
-                  <th>CATEGORY</th>
-                  <th>QUANTITY</th>
-                  <th>PRICE</th>
+                  <th style="text-align:center">CATEGORY</th>
+                  <th style="text-align:center">QUANTITY</th>
+                  <th style="text-align:center">PRICE</th>
                 </tr>
               </thead>
               <tbody>
@@ -142,29 +140,9 @@
 
 
 
-<br><br>
-<center>
-
-      <%= form_tag seats_path do %>
-      <article>
-        <% if flash[:error].present? %>
-          <div id="error_explanation">
-            <p><%= flash[:error] %></p>
-          </div>
-        <% end %>
-      </article>
-
-      <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
-              data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
-              data-description="Standard Ticket: 1"
-              data-amount="2000"
-              data-currency="aud"
-              data-locale="auto"></script>
-    <% end %>
-
-
-</center>
-
+<br>
+<center><a href="/charges/new"><button type="button" class="btn btn-warning" id="confirm-tickets">Confirm Seats</button></a></center>
+<br>
 
 <script>
 $('.seat-tile').on('click', function(){
@@ -196,6 +174,10 @@ $('.seat-tile').on('click', function(){
       chairPrice = 40;
     }
 
+    var price = 0;
+    var priceQuantity = null;
+    var unReserveChair = false;
+
     //find out if this id is in the easter egg seats
     eggData = data[chairId-1].eggtype;
 
@@ -212,67 +194,44 @@ $('.seat-tile').on('click', function(){
 
     }else if(chairColour.indexOf('yellow') > 0  ||   chairColour.indexOf('egg') > 0){
       chairImage.attr('src', '/chairs/armchair-white.png');
+      unReserveChair = true;   //  We are un-reserving a seat
     }
 
-    var price = 0;
-    var priceCells = null;
-    var priceQuantity = null;
+    function updatePricing(row, discount){
+      priceCells = $('body').find(row);
+        var qty = parseInt(priceCells[1].innerHTML);
+        var cost = parseInt(priceCells[2].innerHTML.slice(1));
+        chairPrice = chairPrice*discount;  //100% discount
+        if(unReserveChair === false){
+          priceCells[1].innerHTML = (qty + 1);
+          priceCells[2].innerHTML = "$" + (cost + chairPrice); 
+        }else{
+          priceCells[1].innerHTML = (qty - 1);
+          priceCells[2].innerHTML = "$" + (cost - chairPrice);
+        }
+    }
 
     //now update the pricing table
     if(eggData != "none"){
 
       if(eggData === "gold"){
-        priceCells = $('body').find('#egg-gold td p');
-        var qty = parseInt(priceCells[1].innerHTML);
-        chairPrice = 0;  //100% discount
-        priceCells[1].innerHTML = (qty + 1); 
+        updatePricing('#egg-gold td p', 0);
       }
-
       if(eggData === "red"){
-        priceCells = $('body').find('#egg-red td p');
-        var qty = parseInt(priceCells[1].innerHTML);
-        priceCells[1].innerHTML = qty + 1;
-        var cost = parseInt(priceCells[2].innerHTML.slice(1));
-        chairPrice = chairPrice/2;
-        priceCells[2].innerHTML = "$" + (cost + chairPrice);
+        updatePricing('#egg-red td p', 0.5);
       }
-
       if(eggData === "green"){
-        priceCells = $('body').find('#egg-green td p');
-        var qty = parseInt(priceCells[1].innerHTML);
-        priceCells[1].innerHTML = (qty + 1);
-        var cost = parseInt(priceCells[2].innerHTML.slice(1));
-        chairPrice = chairPrice/4;
-        priceCells[2].innerHTML = "$" + (cost + chairPrice); 
+        updatePricing('#egg-green td p', 0.75); 
       }
-
-
     }else if(chairPrice === 80){
-      priceCells = $('body').find('#seat-gold td p');
-      var qty = parseInt(priceCells[1].innerHTML);
-      priceCells[1].innerHTML = (qty + 1);
-      var cost = parseInt(priceCells[2].innerHTML.slice(1));
-      priceCells[2].innerHTML = "$" + (cost + chairPrice); 
+      updatePricing('#seat-gold td p', 1); 
     }else if(chairPrice === 60){
-      priceCells = $('body').find('#seat-silver td p');
-      var qty = parseInt(priceCells[1].innerHTML);
-      priceCells[1].innerHTML = (qty + 1);
-      var cost = parseInt(priceCells[2].innerHTML.slice(1));
-      priceCells[2].innerHTML = "$" + (cost + chairPrice);
+      updatePricing('#seat-silver td p', 1);
     }else if(chairPrice === 40){
-      priceCells = $('body').find('#seat-bronze td p');
-      var qty = parseInt(priceCells[1].innerHTML);
-      priceCells[1].innerHTML = qty + 1;
-      var cost = parseInt(priceCells[2].innerHTML.slice(1));
-      priceCells[2].innerHTML = "$" + (cost + chairPrice);
+      updatePricing('#seat-bronze td p', 1);
     }
 
-    priceCells = $('body').find('#grand-total td h5');
-    var qty = parseInt(priceCells[1].innerHTML);
-    priceCells[1].innerHTML = qty + 1;
-    var cost = parseInt(priceCells[2].innerHTML.slice(1));
-    priceCells[2].innerHTML = "$" + (cost + chairPrice);
-
+    updatePricing('#grand-total td h5', 1);
 
   });
 
@@ -280,7 +239,7 @@ $('.seat-tile').on('click', function(){
 
 
 
-$('#go-to-payment').on('click', function(){ //When user clicks on 'To payment'
+$('#confirm-tickets').on('click', function(){ //When user clicks on 'To payment'
 
   var options = {
 
@@ -298,22 +257,48 @@ $('#go-to-payment').on('click', function(){ //When user clicks on 'To payment'
     $('body').find('.seat-tile img').each(function(index, image){
       imageName = image.src;
       imageId = parseInt(image.dataset["id"]);
+      var updationRequired = false;
+
+      var pendingPayment = null;
+      var priceOfTicket = null;
+
       //console.log(imageName);
       //console.log(imageId);
       if(imageName.indexOf("yellow") >= 0 || imageName.indexOf("egg") >= 0){
-        seats[imageId-1].status = "sold";
         //console.log(seats[imageId-1]);
-        seats[imageId-1].pendingpayment = true;
+        pendingPayment = true;    //need to update pendingpayment
         if(imageId >=1 && imageId <=40){
-          seats[imageId-1].price = 80;
+          priceOfTicket = 80;             //need to update price
         }else if(imageId >=41 && imageId <=100){
-          seats[imageId-1].price = 60;
+          priceOfTicket = 60;
         }else if(imageId >=101 && imageId <=200){
-          seats[imageId-1].price = 40;
+          priceOfTicket = 40;
         }
+        updationRequired = true;
       }
       if(imageName.indexOf("egg") >= 0){
-        seats[imageId-1].eggtype = "none";
+        if(imageName.indexOf("gold") >= 0){
+          priceOfTicket = priceOfTicket*0;      
+        }else if(imageName.indexOf("red") >= 0){
+          priceOfTicket = priceOfTicket*0.5;
+        }else if(imageName.indexOf("green") >= 0){
+          priceOfTicket = priceOfTicket*0.75;
+        }
+        updationRequired = true;
+      }
+
+      if(updationRequired){
+        console.log(seats[imageId-1]);
+        var options = {          //create a AJAX request for each reserved (yellow) record
+          type: 'put',  
+          url: '/api/seats/'+ imageId,
+          dataType: 'json'
+        }
+
+        //now update the database via AJAX
+        $.ajax(options).done(function(data) {
+          //do nothing, do we need function '.done' to catch error or success?
+        });
       }
 
     });

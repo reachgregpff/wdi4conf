@@ -10,6 +10,11 @@
 #qr-code-title{
 }
 
+#qrcode{
+  background-color: white;
+  border: 4px solid white;
+}
+
 .ticket-text{
   text-align: center;
 }

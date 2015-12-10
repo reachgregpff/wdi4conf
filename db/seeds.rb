@@ -10,9 +10,9 @@ Seat.delete_all
 
 
 Seat.create(userid: '', status: 'available', price: 0, eggtype: "none", pendingpayment: false);     
-Seat.create(userid: '', status: 'available', price: 0, eggtype: "none", pendingpayment: false);     
+Seat.create(userid: 'greg@wdi.com', status: 'available', price: 0, eggtype: "none", pendingpayment: true);     
 Seat.create(userid: '', status: 'sold', price: 80, eggtype: "none", pendingpayment: false);     
-Seat.create(userid: '', status: 'available', price: 0, eggtype: "red", pendingpayment: false);     
+Seat.create(userid: 'bono@wdi.com', status: 'available', price: 0, eggtype: "red", pendingpayment: true);     
 Seat.create(userid: '', status: 'available', price: 0, eggtype: "none", pendingpayment: false);     
 Seat.create(userid: '', status: 'available', price: 0, eggtype: "none", pendingpayment: false);  
 Seat.create(userid: '', status: 'available', price: 0, eggtype: "none", pendingpayment: false);     

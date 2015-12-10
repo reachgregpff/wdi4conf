@@ -1,12 +1,10 @@
 class SeatsController < ApplicationController 
 
   def list
-    @seats = Seat.all
+    @seats = Seat.all.order(:id)
   end
 
 
-
-  
   def create
     # Amount in cents
     @amount = 500
@@ -26,6 +24,11 @@ class SeatsController < ApplicationController
     rescue Stripe::CardError => e
      flash[:error] = e.message
      redirect_to new_seats_path
+  end
+
+  def tickets
+    @paid_seats = Seat.where(pendingpayment: true);
+
   end
   
 end
