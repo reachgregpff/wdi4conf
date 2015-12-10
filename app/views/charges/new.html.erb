@@ -1,1 +1,70 @@
+
 <p><%=@amount%></p>
+
+<br>
+<center>
+  <h1>PLEASE CONFIRM THE AMOUNT OF PAYMENT</h1>
+</center>
+<br>
+
+
+<div class="wrapper">
+  <div class="container">
+    <div class="row" id="my-tickets">
+
+        <div class="row">
+        <center>
+          <div class="col-md-3">
+            <br>
+            <p class="ticket-text">Total Amount: </p>
+          </div>
+          <div class="col-md-3">
+            <h4  class="ticket-text"><%= label_tag 'amount', "$#{@amount}.00" %></h4>
+          </div>
+        </div>
+        </center>
+<!-- the payment form and button -->
+
+        <div class="row">
+           <center>
+           <%= form_tag charges_path, id: 'stripeForm' do -%>
+             <script src="https://checkout.stripe.com/checkout.js"></script>
+
+             <button id="stripe-button" class="btn btn-primary byn-lg active">PROCEED TO PAYMENT</button>
+             <%= hidden_field_tag 'stripeToken' %>
+             <%= hidden_field_tag 'stripeEmail' %>
+             <%= hidden_field_tag 'stripeAmount' %>
+           
+             <script>
+               var handler = StripeCheckout.configure({
+                 key: "<%= Rails.configuration.stripe[:publishable_key] %>",
+                 token: function (token, args) {
+                   $("#stripeToken").value = token.id;
+                     $("#stripeEmail").value = token.email;
+                     $("#stripeAmount").value = <%= @amount %>;
+                     $("#stripeForm").submit();
+                 }
+               });
+           
+               $('#stripe-button').on('click', function (e) {
+                 // Open Checkout with further options
+                 handler.open({
+                   name: 'Customer name',
+                   description: 'WDI4 Conf Ticket',
+                   amount: <%= @amount * 100 %>
+                 });
+               e.preventDefault();
+               });
+           
+               $(window).on('popstate', function() {
+                 handler.close();
+               });
+             </script>
+           <% end %>
+      </center>
+      
+        </div>
+    </div>
+  </div>
+</div>
+

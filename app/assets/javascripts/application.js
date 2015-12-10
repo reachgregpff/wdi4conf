@@ -75,7 +75,11 @@ $('document').ready(function(){
     }
     minutes = checkTime(minutes);
     seconds = checkTime(seconds);
-    time.innerHTML = ("Till Event: " + months + "M " + days + "D " + hour + ":" + minutes + ":" + seconds);
+    if (date2 === date1) {
+      time.innerHTML = ("Till Event: Event Has Ended");
+    } else {
+      time.innerHTML = ("Till Event: " + months + "M " + days + "D " + hour + ":" + minutes + ":" + seconds);
+    }
     var t = setTimeout(startTime, 500);
   }
 
@@ -106,7 +110,7 @@ $('document').ready(function(){
 
   $.ajax({
     dataType: "json",
-    url: "https://api.myjson.com/bins/3b5g5",
+    url: "https://api.myjson.com/bins/4d5kx",
     data: data
   }).done(function (data) {
     for (var i = 0; i < data.length; i++) {

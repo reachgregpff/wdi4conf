@@ -1,5 +1,6 @@
 class ChargesController < ApplicationController
   def new
+
    pending_seats = Seat.where('pendingpayment = true')
    @amount = 0;
    pending_seats.each do | seat | 
@@ -10,16 +11,18 @@ class ChargesController < ApplicationController
      #puts seat.pendingpayment
    end
 
+
   end
   
   def create
     # Amount in cents
+
     @amount = params[:stripeAmount].to_i * 100
-    @email = params[:stripeEmail]
+    # @email = params[:stripeEmail]
 
     customer = Stripe::Customer.create(
       :email => params[:stripeEmail],
-      :source  => params[:stripeToken]
+      :card  => params[:stripeToken]
     )
 
     charge = Stripe::Charge.create(

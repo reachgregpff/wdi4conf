@@ -373,6 +373,15 @@ input#mc-embedded-subscribe {
     width: 30%;
     margin-left: 186px;
   }
+
+  .legend-icon {
+    left: 45%;
+    width: 30%;
+  }
+  .col-md-1 p {
+    float: left;
+    margin-left: 57px;
+  }
 }
 
 /* Medium devices (desktops, 992px and up) */
@@ -382,9 +391,9 @@ input#mc-embedded-subscribe {
     margin-left: 130px;
   }
 
-  /*h4#time {
-    margin-left: 256px;
-  }*/
+  h4#time {
+    margin-left: 28%;
+  }
 
   #map-box {
     margin-left: 4px;
@@ -395,12 +404,17 @@ input#mc-embedded-subscribe {
   }
 
   .color-list {
-    height: 32vh;
+    height: 48vh;
   }
 
   .color .col-md-8 img {
     width: 63%;
     margin-left: 48px;
+  }
+
+  .col-md-4.after-party {
+      width: 37%;
+      margin-left: -3%;
   }
 /*
   .app-info {

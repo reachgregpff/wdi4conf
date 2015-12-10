@@ -143,7 +143,7 @@
 
  
     <center>
-      <a href="/seats/tickets"><button type="button" class="btn btn-warning" id="confirm-tickets" >Confirm Seats</button></a>
+      <a href="/charges/new"><button type="button" class="btn btn-warning" id="confirm-tickets" >Confirm Seats</button></a>
     </center>
 
     <br>
@@ -284,6 +284,7 @@ $('.seat-tile').on('click', function(){
 
 $('#confirm-tickets').on('click', function(){ //When user clicks on 'To payment'
 
+
   
     var that = this;
 
@@ -344,6 +345,7 @@ $('#confirm-tickets').on('click', function(){ //When user clicks on 'To payment'
         updationRequired = true;
       }
 
+
       // if(updationRequired){
         
       //   var options = {          //create a AJAX request for each reserved (yellow) record
@@ -359,23 +361,32 @@ $('#confirm-tickets').on('click', function(){ //When user clicks on 'To payment'
       // }
 
 
+
+
+      if(count == 200){
+
+        var totalPrice = $('body').find("#grand-total td h5")[2].innerHTML.slice(1);
+        console.log(totalPrice);
+
+        var options = {          //create a AJAX request for each reserved (yellow) record
+          type: 'put',  
+          url: '/api/seats/'+ 201,
+          dataType: 'json',
+          data: {
+            price: totalPrice 
+          }
+         }
+
+        //now update the database via AJAX
+        $.ajax(options).done(function(data) {
+        //do nothing, do we need function '.done' to catch error or success?
+        });
+
+      }
+
     });
 
 
-  // var totalPrice = $('body').find("#grand-total td h5")[2].innerHTML.slice(1);
-
-  //           totalPrice = parseInt(totalPrice);
-            
-     
-  //          $.ajax({
-  //            url: '/charges/new',
-  //            type: 'post',
-  //            dataType: 'json',
-  //            data: {
-  //             totalamount: totalPrice
-  //            }
-
-  //          });
 
 });
 
