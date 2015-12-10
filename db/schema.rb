@@ -11,11 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-<<<<<<< HEAD
 ActiveRecord::Schema.define(version: 20151209013640) do
-=======
-ActiveRecord::Schema.define(version: 20151204124645) do
->>>>>>> 3d9a8c3b0f8daf2a4bbb50c5214f82f0cc24e367
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -24,18 +20,12 @@ ActiveRecord::Schema.define(version: 20151204124645) do
     t.string   "userid"
     t.string   "status"
     t.integer  "price"
-<<<<<<< HEAD
+    t.string   "eggtype"
     t.boolean  "pendingpayment"
     t.datetime "created_at",     null: false
     t.datetime "updated_at",     null: false
   end
 
-=======
-    t.string   "eggtype"
-    t.boolean  "pendingpayment"
-    t.datetime "created_at",     null: false
-    t.datetime "updated_at",     null: false
->>>>>>> 3d9a8c3b0f8daf2a4bbb50c5214f82f0cc24e367
   create_table "users", force: :cascade do |t|
     t.string   "email"
     t.string   "password_digest"
