@@ -61,6 +61,8 @@ Rails.application.routes.draw do
 
   get '/tickets' => 'seats#tickets'
 
+
+
   resources :seats
 
   resources :charges

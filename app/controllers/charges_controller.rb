@@ -1,18 +1,19 @@
 class ChargesController < ApplicationController
   def new
-   @amount = params[:totalamount] 
-   # redirect_to '/tickets'
-   render js: => "window.location = '/charges/new'"  
+   @amount = Seat.find(201).price;
+   #redirect_to '/payment'
+   #render js: => "window.location = '/charges/new'"  
   end
   
   def create
     # Amount in cents
+
     @amount = params[:stripeAmount].to_i * 100
-    @email = params[:stripeEmail]
+    # @email = params[:stripeEmail]
 
     customer = Stripe::Customer.create(
       :email => params[:stripeEmail],
-      :source  => params[:stripeToken]
+      :card  => params[:stripeToken]
     )
 
     charge = Stripe::Charge.create(
