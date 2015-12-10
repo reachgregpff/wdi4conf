@@ -67,21 +67,25 @@ Rails.application.routes.draw do
 
   resources :charges
 
-  post '/charges/new' => 'charges#new'
+  get '/users' => 'users#new'
+  put '/users'=> 'users#create'
+
 
   namespace :api do
     resources :seats, only: [:index, :update, :create]  #we want to be able to view seats and also be able to edit/update seats through AJAX calls
   end
 
+  # showing the login form
+    get '/login' => 'session#new'
+    # login
+    post '/login' => 'session#create'
+    # logout
+    # get '/logout' => 'pages#home'
+    delete '/logout' => 'session#destroy'
 
+  namespace :api do
+    resources :seats, only: [:index]
 
-
-
-
-
-
-
-
-
+  end
 
 end
