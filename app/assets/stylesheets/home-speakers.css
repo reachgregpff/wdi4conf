@@ -30,6 +30,12 @@
   margin-bottom: 80px;
 }
 
+img.headshot_left.asep {
+    /* width: 40%; */
+    height: 100%;
+    /* border-radius: 76%; */
+}
+
 .color-list {
   display: flex;
 

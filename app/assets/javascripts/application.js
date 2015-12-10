@@ -98,7 +98,7 @@ $('document').ready(function(){
 
   $.ajax({
     dataType: "json",
-    url: "https://api.myjson.com/bins/3b5g5",
+    url: "https://api.myjson.com/bins/4d5kx",
     data: data
   }).done(function (data) {
     for (var i = 0; i < data.length; i++) {
