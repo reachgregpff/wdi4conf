@@ -1,7 +1,7 @@
 
 <br>
 <%=puts @free_seats_list%>
-<script> 
+<script>
   var subtotal=9000;
 </script>
 <div class="wrapper">
@@ -75,7 +75,7 @@
             <br>
           <%end%>
         <%end%>
-        
+
         <br><br>
 
 
@@ -121,13 +121,13 @@
                   <td><p>0</p></td>
                   <td><p>$0</p></td>
                 </tr>
-          
+
                 <tr id="grand-total">
                   <td><h5>GRAND TOTAL</h5></td>
                   <td><h5>0</h5></td>
                   <td><h5>$0</h5></td>
                 </tr>
-              
+
               </tbody>
             </table>
         </div>
@@ -158,13 +158,20 @@ $('.seat-tile').on('click', function(){
 
   var options = {
 
-    type: 'get',  
+<<<<<<< HEAD
+      type: 'get',
+      url: '/api/eggs',
+      dataType: 'json',
+      data: { }
+=======
+    type: 'get',
     url: '/api/seats',
     dataType: 'json',
     data: { id: chairId }
+>>>>>>> 3d9a8c3b0f8daf2a4bbb50c5214f82f0cc24e367
   };
 
-  $.ajax(options).done(function(data) { //When user clicks on a seat 
+  $.ajax(options).done(function(data) { //When user clicks on a seat
 
     chairImage = $(that).find('img');
     chairColour = $(that).find('img').attr('src');
@@ -210,7 +217,7 @@ $('.seat-tile').on('click', function(){
         chairPrice = chairPrice*discount;  //100% discount
         if(unReserveChair === false){
           priceCells[1].innerHTML = (qty + 1);
-          priceCells[2].innerHTML = "$" + (cost + chairPrice); 
+          priceCells[2].innerHTML = "$" + (cost + chairPrice);
         }else{
           priceCells[1].innerHTML = (qty - 1);
           priceCells[2].innerHTML = "$" + (cost - chairPrice);
@@ -227,10 +234,10 @@ $('.seat-tile').on('click', function(){
         updatePricing('#egg-red td p', 0.5);
       }
       if(eggData === "green"){
-        updatePricing('#egg-green td p', 0.75); 
+        updatePricing('#egg-green td p', 0.75);
       }
     }else if(chairPrice === 80){
-      updatePricing('#seat-gold td p', 1); 
+      updatePricing('#seat-gold td p', 1);
     }else if(chairPrice === 60){
       updatePricing('#seat-silver td p', 1);
     }else if(chairPrice === 40){
@@ -248,16 +255,15 @@ $('.seat-tile').on('click', function(){
 $('#confirm-tickets').on('click', function(){ //When user clicks on 'To payment'
 
   var options = {
-
-    type: 'get',  
-    url: '/api/seats',
+    type: 'get',
+    url: '/api/eggs',
     dataType: 'json',
     data: { }
   };
 
   $.ajax(options).done(function(seats) {
     var that = this;
-    
+
     //console.log($('body').find('.seat-tile > img').length);
 
     $('body').find('.seat-tile img').each(function(index, image){
@@ -284,7 +290,7 @@ $('#confirm-tickets').on('click', function(){ //When user clicks on 'To payment'
       }
       if(imageName.indexOf("egg") >= 0){
         if(imageName.indexOf("gold") >= 0){
-          priceOfTicket = priceOfTicket*0;      
+          priceOfTicket = priceOfTicket*0;
         }else if(imageName.indexOf("red") >= 0){
           priceOfTicket = priceOfTicket*0.5;
         }else if(imageName.indexOf("green") >= 0){
@@ -296,7 +302,7 @@ $('#confirm-tickets').on('click', function(){ //When user clicks on 'To payment'
       if(updationRequired){
         console.log(seats[imageId-1]);
         var options = {          //create a AJAX request for each reserved (yellow) record
-          type: 'put',  
+          type: 'put',
           url: '/api/seats/'+ imageId,
           dataType: 'json'
         }
@@ -308,7 +314,7 @@ $('#confirm-tickets').on('click', function(){ //When user clicks on 'To payment'
       }
 
     });
-    
+
   });
 
 
