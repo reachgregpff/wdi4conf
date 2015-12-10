@@ -18,6 +18,14 @@
 
 $('document').ready(function(){
 
+    $('a').click(function(){
+    $('html, body').animate({
+        scrollTop: $( $(this).attr('href') ).offset().top -50
+    // scrollBy(0, -50)
+    }, 500);
+    return false;
+});
+
   // Get the infobox for the map
   var data = "WDI4 Famous 5</br> 45 William Street,</br> Melbourne, VIC 3000</br> Phone: 04 9999 9999";
 
@@ -79,11 +87,11 @@ $('document').ready(function(){
   startTime();
 
   var $color = $( ".color" )
-  $color.mouseover(function() {
-    $(this).find('.sneak-peak').hide();
-  }).mouseout(function() {
-    $(this).find('.sneak-peak').show();
-  });
+  // $color.mouseover(function() {
+  //   $(this).find('.sneak-peak').hide();
+  // }).mouseout(function() {
+  //   $(this).find('.sneak-peak').show();
+  // });
 
   $color.mouseover(function() {
     $(this).addClass('active');
@@ -104,5 +112,12 @@ $('document').ready(function(){
     for (var i = 0; i < data.length; i++) {
       console.log(data[i].name);
     }
-  })
+  });
+
+  $("#qrcode").qrcode({
+    "size": 100,
+    "color": "#3a3",
+    "fill": "red",
+    "text": "GREGORY FERNANDES A18"
+  });
 });

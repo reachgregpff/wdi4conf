@@ -8,7 +8,7 @@ h4#time {
   color: black;
   background-color: rgb(255, 242, 0);
   width: 47%;
-  margin-left: 47%;
+  /*margin-left: 47%;*/
 }
 
 .col-md-6.app-info h4 {

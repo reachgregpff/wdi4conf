@@ -395,26 +395,30 @@ input#mc-embedded-subscribe {
   }
 
   .color-list {
-    height: 33vh;
+    height: 32vh;
   }
 
   .color .col-md-8 img {
-      width: 34%;
-      margin-left: 28px;
+    width: 63%;
+    margin-left: 48px;
   }
+/*
+  .app-info {
+    margin-left: auto;
+  }*/
 
   /*.ticket-heading-style {
     top: 5%;
     left: -2px;
-  }*/
+  }*/;
 
   .twitter {
     width: 48%;
   }
-
+/*
   .col-md-6.app-info h4 {
     margin-left: 252px;
-  }
+  }*/
 }
 
 /* Large devices (large desktops, 1200px and up) */
