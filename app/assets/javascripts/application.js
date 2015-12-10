@@ -87,11 +87,11 @@ $('document').ready(function(){
   startTime();
 
   var $color = $( ".color" )
-  $color.mouseover(function() {
-    $(this).find('.sneak-peak').hide();
-  }).mouseout(function() {
-    $(this).find('.sneak-peak').show();
-  });
+  // $color.mouseover(function() {
+  //   $(this).find('.sneak-peak').hide();
+  // }).mouseout(function() {
+  //   $(this).find('.sneak-peak').show();
+  // });
 
   $color.mouseover(function() {
     $(this).addClass('active');
@@ -112,5 +112,12 @@ $('document').ready(function(){
     for (var i = 0; i < data.length; i++) {
       console.log(data[i].name);
     }
-  })
+  });
+
+  $("#qrcode").qrcode({
+    "size": 100,
+    "color": "#3a3",
+    "fill": "red",
+    "text": "GREGORY FERNANDES A18"
+  });
 });
