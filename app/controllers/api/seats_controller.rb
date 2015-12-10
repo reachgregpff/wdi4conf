@@ -1,6 +1,6 @@
 class Api::SeatsController < ApplicationController 
 
-    # skip_before_filter  :verify_authenticity_token
+    skip_before_filter  :verify_authenticity_token
 
   def index
     #@dishes = Dish.all
@@ -12,7 +12,11 @@ class Api::SeatsController < ApplicationController
 
     seat = Seat.find(params[:id])
 
-    seat.pendingpayment = true
+    if params[:id].to_i == 201
+      seat.price = params[:price]
+    else
+      seat.pendingpayment = params[:pendingpayment]
+    end
 
     seat.save
     render json: seat

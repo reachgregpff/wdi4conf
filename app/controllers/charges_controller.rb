@@ -1,6 +1,15 @@
 class ChargesController < ApplicationController
   def new
-   @amount = @total
+   pending_seats = Seat.where('pendingpayment = true')
+   @amount = 0;
+   pending_seats.each do | seat | 
+     @amount = @amount + seat.price
+     #puts @amount 
+     #puts seat.price
+     #puts seat.id
+     #puts seat.pendingpayment
+   end
+
   end
   
   def create

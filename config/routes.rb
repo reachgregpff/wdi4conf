@@ -59,7 +59,7 @@ Rails.application.routes.draw do
 
   get '/payment' => 'pages#payment'
 
-  get '/tickets' => 'seats#tickets'
+  get '/seats/tickets' => 'seats#tickets'
 
   resources :seats
 

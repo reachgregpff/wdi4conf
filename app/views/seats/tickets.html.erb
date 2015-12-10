@@ -17,13 +17,17 @@
         <%@paid_seats.each do | paid_seat | %> 
           <div class="row">
             <div class="col-md-3">
-              <h4  class="ticket-text" id="email"><%=@paid_seat.userid%></h4>
+              <h4  class="ticket-text" id="name">DREW BARRYMORE</h4>
             </div>
           </div>
           <div class="col-md-3">
             <h4  class="ticket-text" id="seat">Seat: <%=@paid_seat.id%></h4>
           </div>
         <%end%>
+
+        <!-- <center>
+        <h3 id="amount">Total amount paid: <%#=@amount%></h3>
+        <center> -->
 
       </div>
       <center>
@@ -37,14 +41,14 @@
 
 <script>
 
-  var email = $('body email');
-  var seat = $('body seat');
+  var name = $('body name').innerHTML;
+  var amount = $('body amount').innerHTML;
   
   $("#qrcode").qrcode({
     "size": 100,
     "color": "#3a3",
     "fill": "red",
-    "text": "GREGORY FERNANDES A18"
+    "text": name + ". You paid : $" + "amount"
   });
 
 </script>
