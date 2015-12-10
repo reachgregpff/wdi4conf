@@ -11,34 +11,19 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151208125117) do
+ActiveRecord::Schema.define(version: 20151204124645) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
-
-  create_table "eggs", force: :cascade do |t|
-    t.string   "colour"
-    t.integer  "seat"
-    t.boolean  "pendingpayment"
-    t.datetime "created_at",     null: false
-    t.datetime "updated_at",     null: false
-  end
 
   create_table "seats", force: :cascade do |t|
     t.string   "userid"
     t.string   "status"
     t.integer  "price"
+    t.string   "eggtype"
     t.boolean  "pendingpayment"
     t.datetime "created_at",     null: false
     t.datetime "updated_at",     null: false
-  end
-
-  create_table "users", force: :cascade do |t|
-    t.string   "password_digest"
-    t.string   "email"
-    t.integer  "ticket_id"
-    t.datetime "created_at",      null: false
-    t.datetime "updated_at",      null: false
   end
 
 end
