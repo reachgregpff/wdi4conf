@@ -106,7 +106,7 @@ section.active {
   line-height: 2em;
 }
 
-@media (min-width: 600px) {
+@media (min-width: 786px) {
   .color-list {
     /*
       Change the direction so that each .color

@@ -59,7 +59,7 @@ Rails.application.routes.draw do
 
   get '/payment' => 'pages#payment'
 
-  get '/tickets' => 'pages#tickets'
+  get '/tickets' => 'seats#tickets'
 
   resources :seats
 
@@ -67,7 +67,7 @@ Rails.application.routes.draw do
 
 
   namespace :api do
-    resources :seats, only: [:index]
+    resources :seats, only: [:index, :update, :create]  #we want to be able to view seats and also be able to edit/update seats through AJAX calls
   end
 
 
