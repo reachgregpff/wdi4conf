@@ -75,7 +75,11 @@ $('document').ready(function(){
     }
     minutes = checkTime(minutes);
     seconds = checkTime(seconds);
-    time.innerHTML = ("Till Event: " + months + "M " + days + "D " + hour + ":" + minutes + ":" + seconds);
+    if (date2 === date1) {
+      time.innerHTML = ("Till Event: Event Has Ended");
+    } else {
+      time.innerHTML = ("Till Event: " + months + "M " + days + "D " + hour + ":" + minutes + ":" + seconds);
+    }
     var t = setTimeout(startTime, 500);
   }
 

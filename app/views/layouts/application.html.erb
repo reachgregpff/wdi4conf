@@ -24,59 +24,13 @@
         <li><a href="#">Events</a></li>
         <li><a href="#contacts-page">TwitterFeed</a></li>
         <li><a href="#contacts-page">Contact</a></li>
-        <li><a href="/users">Sign-Up</a></li>
-        <%if logged_in? == false%>
-             <li><a href="#myModal" data-toggle="modal" data-target="#myModal">Login</a></li>
-             <%else%>
-             <li><a href="#myModal" data-toggle="modal" data-target="#myModal">Logout</a></li>
-             <%end%>
-             <!-- <li><a href="#">Signup</a></li> -->
       </ul>
     </div>
   </div>
 </nav>
 
 <div class="container-fluid">
-  <div class="modal fade" id="myModal">
-         <%if logged_in? == false%>
-         <div class="modal-dialog">
-           <div class="modal-content">
-             <div class="modal-header">
-               <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-               <h4 class="modal-title">Log-in</h4>
-             </div>
-             <div class="modal-body">
-               <div class="form-group">
-                 <%= form_tag '/login', method: 'post' do %>
-                 <label for="exampleInputEmail1">Email address</label>
-                 <input class="form-control" id="exampleInputEmail1" placeholder="Enter email" type="email" name="email">
-               </div>
-               <div class="form-group">
-                 <label for="exampleInputPassword1">Password</label>
-                 <input class="form-control" id="exampleInputPassword1" placeholder="Password" type="password" name="password">
-               </div>
-             </div>
-             <div class="modal-footer">
-               <a href="#" data-dismiss="modal" class="btn">Close</a>
-               <button class="btn btn-primary">Log-in</button>
-               <%end%>
-               <%else%>
-               <div class="modal-dialog">
-                 <div class="modal-content">
-                   <div class="modal-header">
-                     <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-                     <h4 class="modal-title">Log-Out</h4>
-                   </div>
-                   <%= form_tag '/logout', method: 'delete' do %>
-                   <div class="modal-footer">
-                     <a href="#" data-dismiss="modal" class="btn">Close</a>
-                     <button class="btn btn-primary">Log-Out</button>
-                     <%end %>
-                     <%end%>
-                   </div>
-                 </div>
-               </div>
-             </div>
+
 <%= yield %>
 
 </div>
@@ -100,8 +54,8 @@
     <div class="col-md-4 col-sm-4 col-xs-8">
       <h2>Reach Us At</h2>
       <div class="col-md-8">
-        <h3><a href="">GitHub</a></h3>
-        <h3><a href="">Twitter</a></h3>
+        <h3><a href="https://github.com/reachgregpff/wdi4conf">GitHub</a></h3>
+        <h3><a href="https://twitter.com/wdi_conf">Twitter</a></h3>
       </div>
     </div>
     <div class="col-md-4 col-sm-4 col-xs-8">
