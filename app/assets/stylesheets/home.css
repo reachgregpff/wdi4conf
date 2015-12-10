@@ -8,7 +8,7 @@ h4#time {
   color: black;
   background-color: rgb(255, 242, 0);
   width: 47%;
-  margin-left: 193px;
+  margin-left: 47%;
 }
 
 .col-md-6.app-info h4 {
@@ -16,7 +16,7 @@ h4#time {
     color: white;
     /* background-color: rgba(232, 201, 22, 0.74); */
     width: 47%;
-    margin-left: 193px;
+    margin-left: 29%;
 }
 
 button.btn.buy-btn {
@@ -86,6 +86,8 @@ img {
     color: white;
     font-size: 1327%;
     margin-bottom: 9px;
+    width: 113%;
+    margin-left: -34px;
 }
 
 #welcome{
@@ -104,6 +106,7 @@ img {
 
 #down-arrow{
   width: 8%;
+  margin-top: 131px;
 }
 
 .app-info {

@@ -80,9 +80,9 @@ $('document').ready(function(){
 
   var $color = $( ".color" )
   $color.mouseover(function() {
-    $(".col-md-8 p").hide();
+    $(this).find('.sneak-peak').hide();
   }).mouseout(function() {
-    $(".col-md-8 p").show();
+    $(this).find('.sneak-peak').show();
   });
 
   $color.mouseover(function() {
@@ -95,4 +95,14 @@ $('document').ready(function(){
   var $sectionActive = $('section.active');
   var rgbaColor = "rgba(255, 0, 0, 0.5)";
   $sectionActive.css("background-color", rgbaColor);
+
+  $.ajax({
+    dataType: "json",
+    url: "https://api.myjson.com/bins/3b5g5",
+    data: data
+  }).done(function (data) {
+    for (var i = 0; i < data.length; i++) {
+      console.log(data[i].name);
+    }
+  })
 });
