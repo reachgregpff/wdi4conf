@@ -11,7 +11,7 @@
         </div>
       <div class="col-md-6">
         <center>
-        <h1 id="qr-code-title">Your WDI4 Conf Ticket</h1>
+        <h1 id="qr-code-title">Payment Suceeded! Here is your WDI4 Conf Ticket Is</h1>
         <center>
 
         <div class="row">
@@ -40,16 +40,26 @@
             <p class="ticket-text">email:</p>
           </div>
           <div class="col-md-6">
-            <h4  class="ticket-text">greg@wdi4.com</h4>
+            <h4  class="ticket-text"><%= @email%></h4>
           </div>
         </div>
 
       </div>
       <center>
         <br><br><br>
-        <div class="col-md-2" id="qrcode">
+        <div class="col-md-3" id="qrcode">
         </div>
       </center>
     </div>
   </div>
 </div>
+
+<script>
+  $("#qrcode").qrcode({
+    "size": 100,
+    "color": "#3a3",
+    "fill": "red",
+    "text": "GREGORY FERNANDES A18"
+  });
+
+</script>

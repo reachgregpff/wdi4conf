@@ -18,6 +18,14 @@
 
 $('document').ready(function(){
 
+    $('a').click(function(){
+    $('html, body').animate({
+        scrollTop: $( $(this).attr('href') ).offset().top -50
+    // scrollBy(0, -50)
+    }, 500);
+    return false;
+});
+
   // Get the infobox for the map
   var data = "WDI4 Famous 5</br> 45 William Street,</br> Melbourne, VIC 3000</br> Phone: 04 9999 9999";
 
@@ -51,7 +59,7 @@ $('document').ready(function(){
 
   function startTime() {
     var time = document.getElementById("time");
-    var date2 = new Date('2015-12-11T05:10:00');
+    var date2 = new Date('2015-12-11T08:00:00');
     var date1 = new Date();
     var diff = new Date(date2.getTime() - date1.getTime());
     var years = diff.getUTCFullYear() - 1970; // Gives difference as year
@@ -79,11 +87,11 @@ $('document').ready(function(){
   startTime();
 
   var $color = $( ".color" )
-  $color.mouseover(function() {
-    $(".col-md-8 p").hide();
-  }).mouseout(function() {
-    $(".col-md-8 p").show();
-  });
+  // $color.mouseover(function() {
+  //   $(this).find('.sneak-peak').hide();
+  // }).mouseout(function() {
+  //   $(this).find('.sneak-peak').show();
+  // });
 
   $color.mouseover(function() {
     $(this).addClass('active');
@@ -95,4 +103,21 @@ $('document').ready(function(){
   var $sectionActive = $('section.active');
   var rgbaColor = "rgba(255, 0, 0, 0.5)";
   $sectionActive.css("background-color", rgbaColor);
+
+  $.ajax({
+    dataType: "json",
+    url: "https://api.myjson.com/bins/3b5g5",
+    data: data
+  }).done(function (data) {
+    for (var i = 0; i < data.length; i++) {
+      console.log(data[i].name);
+    }
+  });
+
+  $("#qrcode").qrcode({
+    "size": 100,
+    "color": "#3a3",
+    "fill": "red",
+    "text": "GREGORY FERNANDES A18"
+  });
 });

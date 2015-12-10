@@ -40,7 +40,7 @@
     flex-direction: column;
   */
   flex-direction: column;
-  height: 30vh;
+  height: 40vh;
 }
 
 .color {
@@ -73,7 +73,7 @@
     size to transition to on hover. Arbitrary,
     based on our design/content.
   */
-  flex-basis: 20em;
+  flex-basis: 23em;
 }
 
 .color:hover .details {
@@ -106,7 +106,7 @@ section.active {
   line-height: 2em;
 }
 
-@media (min-width: 600px) {
+@media (min-width: 786px) {
   .color-list {
     /*
       Change the direction so that each .color
