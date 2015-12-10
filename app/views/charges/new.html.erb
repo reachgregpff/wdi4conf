@@ -20,8 +20,7 @@
           </div>
         </div>
         </center>
-
-
+<!-- the payment form and button -->
 
         <div class="row">
            <center>
@@ -37,10 +36,10 @@
                var handler = StripeCheckout.configure({
                  key: "<%= Rails.configuration.stripe[:publishable_key] %>",
                  token: function (token, args) {
-                   $("#stripeToken").val(token.id);
-                   $("#stripeEmail").val(token.email);
-                   $("#stripeAmount").val('<%= @amount %>');
-                   $("#stripeForm").submit();
+                   $("#stripeToken").value = token.id;
+                     $("#stripeEmail").value = token.email;
+                     $("#stripeAmount").value = <%= @amount %>;
+                     $("#stripeForm").submit();
                  }
                });
            
@@ -59,21 +58,12 @@
                });
              </script>
            <% end %>
-    <!--        <br>
-           <button id="return-button" class="btn btn-primary byn-lg active">BACK TO SEAT PICKING</button>
- -->          </center>
-      <!--     <div class="col-md-3">
-            <br>
-            <p class="ticket-text">email:</p>
-          </div>
-          <div class="col-md-6">
-            <h4  class="ticket-text">greg@wdi4.com</h4>
-          </div> -->
+      </center>
+      
         </div>
     </div>
   </div>
 </div>
-<!-- the payment form and button -->
 
 
 
