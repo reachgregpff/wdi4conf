@@ -18,6 +18,14 @@
 
 $('document').ready(function(){
 
+    $('a').click(function(){
+    $('html, body').animate({
+        scrollTop: $( $(this).attr('href') ).offset().top -50
+    // scrollBy(0, -50)
+    }, 500);
+    return false;
+});
+
   // Get the infobox for the map
   var data = "WDI4 Famous 5</br> 45 William Street,</br> Melbourne, VIC 3000</br> Phone: 04 9999 9999";
 
