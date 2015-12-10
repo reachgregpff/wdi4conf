@@ -79,7 +79,7 @@ img.headshot_left.asep {
     size to transition to on hover. Arbitrary,
     based on our design/content.
   */
-  flex-basis: 23em;
+  flex-basis: 28em;
 }
 
 .color:hover .details {
@@ -91,7 +91,7 @@ img.headshot_left.asep {
 }
 
 .name {
-  font-size: 1.2em;
+  font-size: 1.5em;
   font-weight: 600;
 }
 
