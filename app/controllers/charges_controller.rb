@@ -1,6 +1,6 @@
 class ChargesController < ApplicationController
   def new
-   @amount = 50
+   @amount = @total
   end
   
   def create
