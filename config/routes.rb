@@ -61,35 +61,27 @@ Rails.application.routes.draw do
 
   get '/tickets' => 'pages#tickets'
 
-
   resources :seats
 
   resources :charges
 
-  
+get '/users' => 'users#new'
+put '/users'=> 'users#create'
+
+
+
   # showing the login form
     get '/login' => 'session#new'
     # login
     post '/login' => 'session#create'
-
     # logout
-    delete '/logout' => 'session#delete'
+    # get '/logout' => 'pages#home'
+    delete '/logout' => 'session#destroy'
 
 
   namespace :api do
     resources :seats, only: [:index]
 
   end
-
-
-
-
-
-
-
-
-
-
-
 
 end
