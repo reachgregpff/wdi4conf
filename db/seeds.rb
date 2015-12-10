@@ -228,6 +228,8 @@ Seat.create(userid: '', status: 'available', price: 0, eggtype: "none", pendingp
 Seat.create(userid: '', status: 'sold', price: 40, eggtype: "none", pendingpayment: false);     
 Seat.create(userid: '', status: 'available', price: 0, eggtype: "none", pendingpayment: false);   
 
+#record with grand total
+Seat.create(userid: '', status: 'sold', price: 0, eggtype: "none", pendingpayment: false);   
 
 
 
