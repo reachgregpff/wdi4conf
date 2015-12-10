@@ -12,7 +12,11 @@ class Api::SeatsController < ApplicationController
 
     seat = Seat.find(params[:id])
 
-    seat.pendingpayment = true
+    if params[:id].to_i == 201
+      seat.price = params[:price]
+    else
+      seat.pendingpayment = true
+    end
 
     seat.save
     render json: seat

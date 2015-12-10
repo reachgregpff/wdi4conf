@@ -61,12 +61,15 @@ Rails.application.routes.draw do
 
   get '/tickets' => 'seats#tickets'
 
+
+
   resources :seats
 
   resources :charges
 
   get '/users' => 'users#new'
   put '/users'=> 'users#create'
+
 
   namespace :api do
     resources :seats, only: [:index, :update, :create]  #we want to be able to view seats and also be able to edit/update seats through AJAX calls
