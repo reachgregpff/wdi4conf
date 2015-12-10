@@ -1,6 +1,8 @@
 class ChargesController < ApplicationController
   def new
-   @amount = @total
+   @amount = params[:totalamount] 
+   # redirect_to '/tickets'
+   render js: => "window.location = '/charges/new'"  
   end
   
   def create

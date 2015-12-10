@@ -139,8 +139,15 @@
 </div>
 
 <br>
-<center><a href="/charges/new"><button type="button" class="btn btn-warning" id="confirm-tickets">Confirm Seats</button></a></center>
-<br>
+
+
+
+ 
+    <center>
+    <button type="button" class="btn btn-warning" id="confirm-tickets" >Confirm Seats</button>
+    </center>
+
+    <br>
 
 
 <script>
@@ -308,12 +315,43 @@ $('#confirm-tickets').on('click', function(){ //When user clicks on 'To payment'
       }
 
     });
+
+    var totalPrice = $('body').find("#grand-total td h5")[2].innerHTML.slice(1);
+
+    var options = {          //create a AJAX request for each reserved (yellow) record
+          type: 'put',  
+          url: '/api/seats/'+ 201,
+          dataType: 'json',
+          data: {
+            price: totalPrice 
+          }
+    }
+
+    //now update the database via AJAX
+    $.ajax(options).done(function(data) {
+    //do nothing, do we need function '.done' to catch error or success?
+    });
     
   });
 
+  var totalPrice = $('body').find("#grand-total td h5")[2].innerHTML.slice(1);
 
+            totalPrice = parseInt(totalPrice);
+            
+     
+           $.ajax({
+             url: '/charges/new',
+             type: 'post',
+             dataType: 'json',
+             data: {
+              totalamount: totalPrice
+             }
+
+           });
 
 });
+
+
 
 
 </script>
