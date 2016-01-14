@@ -24,12 +24,12 @@
   text-align: center;
 }
 
-'#eggs-n-chairs-images .col-md-1'{
+#eggs-n-chairs-images{
   width: 20%;
   border: 1px solid red;
 }
 
-'#eggs-n-chairs-legends .col-md-1'{
+#eggs-n-chairs-legends{
   text-align: center;
 }
 
