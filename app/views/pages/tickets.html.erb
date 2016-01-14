@@ -14,35 +14,20 @@
         <h1 id="qr-code-title">Your WDI4 Conf Ticket</h1>
         <center>
 
-        <div class="row">
+        <%@paid_seats.each do | paid_seat | %> 
+          <div class="row">
+            <div class="col-md-3">
+              <h4  class="ticket-text" id="name">DREW BARRYMORE</h4>
+            </div>
+          </div>
           <div class="col-md-3">
-            <br>
-            <p class="ticket-text">Name: </p>
+            <h4  class="ticket-text" id="seat">Seat: <%=@paid_seat.id%></h4>
           </div>
-          <div class="col-md-6">
-            <h4  class="ticket-text">Gregory Fernandes</h4>
-          </div>
-        </div>
+        <%end%>
 
-        <div class="row">
-          <div class="col-md-3">
-            <br>
-            <p class="ticket-text">Seat #: </p>
-          </div>
-          <div class="col-md-6">
-            <h4  class="ticket-text">A18</h4>
-          </div>
-        </div>
-
-        <div class="row">
-          <div class="col-md-3">
-            <br>
-            <p class="ticket-text">email:</p>
-          </div>
-          <div class="col-md-6">
-            <h4  class="ticket-text">greg@wdi4.com</h4>
-          </div>
-        </div>
+        <!-- <center>
+        <h3 id="amount">Total amount paid: <%#=@amount%></h3>
+        <center> -->
 
       </div>
       <center>
@@ -55,11 +40,15 @@
 </div>
 
 <script>
+
+  var name = $('body name').innerHTML;
+  var amount = $('body amount').innerHTML;
+  
   $("#qrcode").qrcode({
     "size": 100,
     "color": "#3a3",
     "fill": "red",
-    "text": "GREGORY FERNANDES A18"
+    "text": name + ". You paid : $" + "amount"
   });
 
 </script>

@@ -1,0 +1,69 @@
+<br>
+
+<center>
+  <img id="ticket-image" src="/ticket-pic.png">
+</center>
+<br>
+
+<div class="wrapper">
+  <div class="container">
+    <div class="row" id="my-tickets">
+      <div class="col-md-1">
+        </div>
+      <div class="col-md-6">
+        <center>
+        <h1 id="qr-code-title">Your WDI4 Conf Ticket</h1>
+        <center>
+
+        <!--<div class="row">
+          <div class="col-md-3">
+            <br>
+            <p class="ticket-text">Name: </p>
+          </div>
+          <div class="col-md-6">
+            <h4  class="ticket-text">Name Here</h4>
+          </div>
+        </div>  -->
+
+        <div class="row">
+          <div class="col-md-3">
+            <br>
+            <p class="ticket-text">Total Seats Booked: </p>
+          </div>
+          <div class="col-md-6">
+            <h4  id="total-seats" class="ticket-text"><%=@total_seats%></h4>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-3">
+            <br>
+            <p class="ticket-text">Amount Paid:</p>
+          </div>
+          <div class="col-md-6">
+            <h4  id="amount-paid" class="ticket-text"><%=@amount%></h4>
+          </div>
+        </div>
+
+      </div>
+      <center>
+        <br><br><br>
+        <div class="col-md-2" id="qrcode">
+        </div>
+      </center>
+    </div>
+  </div>
+</div>
+
+<script>
+
+var qrcodeText = $('#amount-paid').html() + " " + $('#total-seats').html();
+console.log(qrcodeText);
+  $("#qrcode").qrcode({
+    "size": 150,
+    "color": "#3a3",
+    "fill": "red",
+    "text": qrcodeText
+  });
+
+</script>

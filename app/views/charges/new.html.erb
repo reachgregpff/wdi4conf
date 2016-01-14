@@ -1,6 +1,3 @@
-
-<p><%=@amount%></p>
-
 <br>
 <center>
   <h1>PLEASE CONFIRM THE AMOUNT OF PAYMENT</h1>
@@ -27,7 +24,7 @@
 
         <div class="row">
            <center>
-           <%= form_tag charges_path, id: 'stripeForm' do -%>
+           <%= form_tag '/charges/tickets', id: 'stripeForm' do -%>
              <script src="https://checkout.stripe.com/checkout.js"></script>
 
              <button id="stripe-button" class="btn btn-primary byn-lg active">PROCEED TO PAYMENT</button>

@@ -12,11 +12,10 @@ Seat.delete_all
 
 Seat.create(userid: '', status: 'available', price: 80, eggtype: "none", pendingpayment: false);     
 Seat.create(userid: '', status: 'available', price: 80, eggtype: "none", pendingpayment: false);     
-Seat.create(userid: '', status: 'sold', price: 80, eggtype: "none", pendingpayment: false);     
-Seat.create(userid: '', status: 'available', price: 80, eggtype: "red", pendingpayment: false);     
+Seat.create(userid: '', status: 'available', price: 80, eggtype: "none", pendingpayment: false);     
+Seat.create(userid: '', status: 'available', price: 40, eggtype: "red", pendingpayment: false);     
 Seat.create(userid: '', status: 'available', price: 80, eggtype: "none", pendingpayment: false);     
 Seat.create(userid: '', status: 'available', price: 80, eggtype: "none", pendingpayment: false);  
-
 Seat.create(userid: '', status: 'available', price: 80, eggtype: "none", pendingpayment: false);     
 Seat.create(userid: '', status: 'available', price: 80, eggtype: "none", pendingpayment: false);     
 Seat.create(userid: '', status: 'available', price: 0, eggtype: "gold", pendingpayment: false);     
@@ -25,7 +24,7 @@ Seat.create(userid: '', status: 'available', price: 80, eggtype: "none", pending
 Seat.create(userid: '', status: 'available', price: 80, eggtype: "none", pendingpayment: false);     
 Seat.create(userid: '', status: 'available', price: 80, eggtype: "none", pendingpayment: false);     
 Seat.create(userid: '', status: 'available', price: 80, eggtype: "none", pendingpayment: false); 
-Seat.create(userid: '', status: 'sold', price: 80, eggtype: "none", pendingpayment: false);     
+Seat.create(userid: '', status: 'available', price: 80, eggtype: "none", pendingpayment: false);     
 Seat.create(userid: '', status: 'available', price: 80, eggtype: "none", pendingpayment: false);     
 Seat.create(userid: '', status: 'available', price: 80, eggtype: "none", pendingpayment: false);     
 Seat.create(userid: '', status: 'available', price: 80, eggtype: "none", pendingpayment: false);     
@@ -38,15 +37,15 @@ Seat.create(userid: '', status: 'available', price: 60, eggtype: "green", pendin
 Seat.create(userid: '', status: 'available', price: 80, eggtype: "none", pendingpayment: false);     
 Seat.create(userid: '', status: 'available', price: 80, eggtype: "none", pendingpayment: false);     
 Seat.create(userid: '', status: 'available', price: 80, eggtype: "none", pendingpayment: false);  
-Seat.create(userid: '', status: 'sold', price: 80, eggtype: "none", pendingpayment: false);     
+Seat.create(userid: '', status: 'available', price: 80, eggtype: "none", pendingpayment: false);     
 Seat.create(userid: '', status: 'available', price: 80, eggtype: "none", pendingpayment: false);     
 Seat.create(userid: '', status: 'available', price: 60, eggtype: "green", pendingpayment: false);     
 Seat.create(userid: '', status: 'available', price: 80, eggtype: "none", pendingpayment: false);     
-Seat.create(userid: '', status: 'available', price: 20, eggtype: "red", pendingpayment: false);     
+Seat.create(userid: '', status: 'available', price: 40, eggtype: "red", pendingpayment: false);     
 Seat.create(userid: '', status: 'available', price: 80, eggtype: "none", pendingpayment: false);     
 Seat.create(userid: '', status: 'available', price: 80, eggtype: "none", pendingpayment: false);     
 Seat.create(userid: '', status: 'available', price: 80, eggtype: "none", pendingpayment: false); 
-Seat.create(userid: '', status: 'sold', price: 80, eggtype: "none", pendingpayment: false);     
+Seat.create(userid: '', status: 'available', price: 80, eggtype: "none", pendingpayment: false);     
 Seat.create(userid: '', status: 'available', price: 80, eggtype: "none", pendingpayment: false);     
 Seat.create(userid: '', status: 'available', price: 80, eggtype: "none", pendingpayment: false);     
 Seat.create(userid: '', status: 'available', price: 80, eggtype: "none", pendingpayment: false);     
@@ -65,7 +64,7 @@ Seat.create(userid: '', status: 'available', price: 60, eggtype: "none", pending
 Seat.create(userid: '', status: 'available', price: 60, eggtype: "none", pendingpayment: false);     
 Seat.create(userid: '', status: 'available', price: 60, eggtype: "none", pendingpayment: false);  
 Seat.create(userid: '', status: 'available', price: 60, eggtype: "none", pendingpayment: false);     
-Seat.create(userid: '', status: 'sold', price: 60, eggtype: "none", pendingpayment: false);     
+Seat.create(userid: '', status: 'available', price: 60, eggtype: "none", pendingpayment: false);     
 Seat.create(userid: '', status: 'available', price: 60, eggtype: "none", pendingpayment: false);     
 Seat.create(userid: '', status: 'available', price: 60, eggtype: "none", pendingpayment: false);     
 Seat.create(userid: '', status: 'available', price: 60, eggtype: "none", pendingpayment: false);     
@@ -79,7 +78,7 @@ Seat.create(userid: '', status: 'available', price: 60, eggtype: "none", pending
 Seat.create(userid: '', status: 'available', price: 60, eggtype: "none", pendingpayment: false);     
 Seat.create(userid: '', status: 'available', price: 45, eggtype: "green", pendingpayment: false); 
 
-Seat.create(userid: '', status: 'sold', price: 60, eggtype: "none", pendingpayment: false);     
+Seat.create(userid: '', status: 'available', price: 60, eggtype: "none", pendingpayment: false);     
 Seat.create(userid: '', status: 'available', price: 60, eggtype: "none", pendingpayment: false);     
 Seat.create(userid: '', status: 'available', price: 60, eggtype: "none", pendingpayment: false);     
 Seat.create(userid: '', status: 'available', price: 60, eggtype: "none", pendingpayment: false);     
@@ -88,7 +87,7 @@ Seat.create(userid: '', status: 'available', price: 60, eggtype: "none", pending
 Seat.create(userid: '', status: 'available', price: 60, eggtype: "none", pendingpayment: false);     
 Seat.create(userid: '', status: 'available', price: 60, eggtype: "none", pendingpayment: false);     
 Seat.create(userid: '', status: 'available', price: 60, eggtype: "none", pendingpayment: false);     
-Seat.create(userid: '', status: 'sold', price: 60, eggtype: "none", pendingpayment: false);     
+Seat.create(userid: '', status: 'available', price: 60, eggtype: "none", pendingpayment: false);     
 Seat.create(userid: '', status: 'available', price: 60, eggtype: "none", pendingpayment: false);     
 Seat.create(userid: '', status: 'available', price: 60, eggtype: "none", pendingpayment: false);     
 Seat.create(userid: '', status: 'available', price: 60, eggtype: "none", pendingpayment: false);     
@@ -213,7 +212,7 @@ Seat.create(userid: '', status: 'available', price: 40, eggtype: "none", pending
 Seat.create(userid: '', status: 'available', price: 30, eggtype: "green", pendingpayment: false);     
 Seat.create(userid: '', status: 'available', price: 40, eggtype: "none", pendingpayment: false);     
 Seat.create(userid: '', status: 'available', price: 40, eggtype: "none", pendingpayment: false);     
-Seat.create(userid: '', status: 'sold', price: 40, eggtype: "none", pendingpayment: false);     
+Seat.create(userid: '', status: 'available', price: 40, eggtype: "none", pendingpayment: false);     
 Seat.create(userid: '', status: 'available', price: 40, eggtype: "none", pendingpayment: false);  
 Seat.create(userid: '', status: 'available', price: 40, eggtype: "none", pendingpayment: false);     
 Seat.create(userid: '', status: 'available', price: 40, eggtype: "none", pendingpayment: false);     
@@ -227,7 +226,7 @@ Seat.create(userid: '', status: 'available', price: 40, eggtype: "none", pending
 Seat.create(userid: '', status: 'available', price: 40, eggtype: "none", pendingpayment: false);     
 Seat.create(userid: '', status: 'available', price: 40, eggtype: "none", pendingpayment: false);     
 Seat.create(userid: '', status: 'available', price: 40, eggtype: "none", pendingpayment: false);     
-Seat.create(userid: '', status: 'sold', price: 40, eggtype: "none", pendingpayment: false);     
+Seat.create(userid: '', status: 'available', price: 40, eggtype: "none", pendingpayment: false);     
 Seat.create(userid: '', status: 'available', price: 40, eggtype: "none", pendingpayment: false);   
 
 #record with grand total

@@ -61,11 +61,15 @@ Rails.application.routes.draw do
 
   get '/seats/tickets' => 'seats#tickets'
 
+  get '/tickets' => 'pages#ticket'
 
 
   resources :seats
 
-  resources :charges
+  #resources :charges
+  get '/charges/new' => 'charges#new'
+  post '/charges/tickets' => 'charges#tickets'
+
 
   get '/users' => 'users#new'
   put '/users'=> 'users#create'

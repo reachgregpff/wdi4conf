@@ -1,6 +1,6 @@
 class ChargesController < ApplicationController
-  def new
 
+  def new
    pending_seats = Seat.where('pendingpayment = true')
    @amount = 0;
    pending_seats.each do | seat | 
@@ -10,9 +10,24 @@ class ChargesController < ApplicationController
      #puts seat.id
      #puts seat.pendingpayment
    end
+  end
 
+  def tickets
+   @paid_seats = Seat.where('pendingpayment = true')
+   @amount = 0;
+   @total_seats = 0;
+
+   @paid_seats.each do | seat | 
+     @amount = @amount + seat.price
+     seat.pendingpayment = false
+     seat.status = 'sold'
+     seat.save
+     @total_seats = @total_seats + 1
+   end
 
   end
+
+
   
   def create
     # Amount in cents
