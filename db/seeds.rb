@@ -57,7 +57,7 @@ Seat.create(userid: '', status: 'available', price: 80, eggtype: "none", pending
 
 #silver class
 
-Seat.create(userid: '', status: 'available', price: 60, eggtype: "none", pendingpayment: true);     
+Seat.create(userid: '', status: 'available', price: 60, eggtype: "none", pendingpayment: false);     
 Seat.create(userid: '', status: 'available', price: 45, eggtype: "green", pendingpayment: false);     
 Seat.create(userid: '', status: 'available', price: 60, eggtype: "none", pendingpayment: false);     
 Seat.create(userid: '', status: 'available', price: 60, eggtype: "none", pendingpayment: false);     
