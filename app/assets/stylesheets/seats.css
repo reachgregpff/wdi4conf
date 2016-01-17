@@ -7,6 +7,14 @@
   width:30%;
 }
 
+.seat-title{
+  color:yellow;
+}
+
+.grand-total{
+  color: gold;
+}
+
 #pricing-table, #pricing{
   text-align: center;
   background-color: rgba(239, 5, 5, 0.35);
@@ -24,8 +32,8 @@
   text-align: center;
 }
 
-#eggs-n-chairs-images{
-  width: 20%;
+#eggs-n-chairs-icons{
+  background-color: rgba(239, 245, 5, 0.35);
   border: 1px solid red;
 }
 

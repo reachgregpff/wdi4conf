@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
+
   # You can have the root of your site routed with "root"
   # root 'welcome#index'
 
@@ -53,43 +54,41 @@ Rails.application.routes.draw do
   #     resources :products
   #   end
 
+
   get '/' => 'pages#home'
 
   get '/seats' => 'seats#list'
-
-  get '/payment' => 'pages#payment'
-
-  get '/seats/tickets' => 'seats#tickets'
-
-  get '/tickets' => 'pages#ticket'
-
-
-  resources :seats
-
-  #resources :charges
   get '/charges/new' => 'charges#new'
   post '/charges/tickets' => 'charges#tickets'
-
-
-  get '/users' => 'users#new'
-  put '/users'=> 'users#create'
 
 
   namespace :api do
     resources :seats, only: [:index, :update, :create]  #we want to be able to view seats and also be able to edit/update seats through AJAX calls
   end
 
+  #get '/payment' => 'pages#payment'
+
+
+  #get '/tickets' => 'pages#ticket'
+
+
+  #resources :seats
+
+  #post '/charges/tickets' => 'charges#tickets'
+
+
+  #get '/users' => 'users#new'
+  #put '/users'=> 'users#create'
+
+
+
+
   # showing the login form
-    get '/login' => 'session#new'
+    #get '/login' => 'session#new'
     # login
-    post '/login' => 'session#create'
+    #post '/login' => 'session#create'
     # logout
     # get '/logout' => 'pages#home'
-    delete '/logout' => 'session#destroy'
-
-  namespace :api do
-    resources :seats, only: [:index]
-
-  end
+    #delete '/logout' => 'session#destroy'
 
 end

@@ -8,6 +8,7 @@
 }
 
 #qr-code-title{
+  color: white;
 }
 
 #qrcode{
@@ -17,4 +18,5 @@
 
 .ticket-text{
   text-align: center;
+  color: gold;
 }

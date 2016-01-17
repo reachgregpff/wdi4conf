@@ -1,5 +1,5 @@
 .photo{
-  width: 50%;
+  width: 80%;
   border: 2px solid white;
   border-radius: 100px;
   margin-left: 46px;
@@ -131,3 +131,36 @@ section.active {
 
 /* Fonts, OK at the end for this demo! */
 @import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600);
+
+
+
+@media all and (max-width: 50em) {
+
+  .photo{
+    width: 60%;
+  }
+
+  .name {
+    font-size: 1em;
+    font-weight: 150;
+  }
+
+  .color-list {
+    /*
+      Change the direction so that each .color
+      aligns horizontally
+    */
+    flex-direction: row;
+  }
+
+  .color {
+    /*
+      No scrollbars on mobile
+    */
+    flex-shrink: 1;
+  }
+
+}
+
+
+

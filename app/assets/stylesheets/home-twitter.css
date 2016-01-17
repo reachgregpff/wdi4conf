@@ -1,0 +1,25 @@
+#twitter-feed {
+  margin-bottom: 2px;
+}
+
+#twitter-feed::after {
+  content: '';
+  display: block;
+  box-shadow: 0 0.9px 0 0.2px white;
+  margin-top: 2rem;
+  margin-bottom: 80px;
+}
+
+#event-party{
+  width: 70%;
+}
+
+@media all and (max-width: 50em) {
+
+#event-party{
+  width: 50%;
+}
+
+}
+
+

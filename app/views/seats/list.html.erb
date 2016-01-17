@@ -1,20 +1,20 @@
-<br>
+<br><br><br><br>
 <%=puts @free_seats_list%>
 <script>
   var subtotal=9000;
 </script>
 <div class="wrapper">
 
-      <div class="row" id="eggs-n-chairs-images">
+      <center><div class="row" id="eggs-n-chairs-icons">
         <div class="col-md-1"></div>
-        <div class="col-md-1"><img class="legend-icon" src="/eggs/egg-gold.png"></div>
-        <div class="col-md-1"><img class="legend-icon" src="/eggs/egg-red.png"></div>
-        <div class="col-md-1"><img class="legend-icon" src="/eggs/egg-green.png"></div>
-        <div class="col-md-1"><img class="legend-icon" src="/chairs/armchair-white.png"></div>
-        <div class="col-md-1"><img class="legend-icon" src="/chairs/armchair-yellow.png"></div>
-        <div class="col-md-1"><img class="legend-icon" src="/chairs/armchair-black.png"></div>
+        <div class="col-md-1"><img class="legend-icons" src="/images/eggs/egg-gold.png"></div>
+        <div class="col-md-1"><img class="legend-icons" src="/images/eggs/egg-red.png"></div>
+        <div class="col-md-1"><img class="legend-icons" src="/images/eggs/egg-green.png"></div>
+        <div class="col-md-1"><img class="legend-icons" src="/images/chairs/armchair-white.png"></div>
+        <div class="col-md-1"><img class="legend-icons" src="/images/chairs/armchair-yellow.png"></div>
+        <div class="col-md-1"><img class="legend-icons" src="/images/chairs/armchair-black.png"></div>
         <div class="col-md-1"></div>
-      </div>
+      </div></center>
       <div class="row" id="eggs-n-chairs-legends">
         <div class="col-md-1"></div>
         <div class="col-md-1"><p>FREE!</p></div>
@@ -33,13 +33,13 @@
       <div class="col-md-7" id="seats">
         <!--<h4 id="seat-game-title">MAIN STAGE</h4>-->
 
-        <center><h4>Gold Seats - $80</h4></center>
+        <center><h4 class="seat-title">Gold Seats - $80</h4></center>
         <%for i in 1..40%>
           <div class="seat-tile">
             <%if @seats[i-1].status == "available"%>
-              <img src="/chairs/armchair-white.png" class="gold" data-id="<%=i%>">
+              <img src="/images/chairs/armchair-white.png" class="gold" data-id="<%=i%>">
             <%else%>
-              <img src="/chairs/armchair-black.png" class="gold" data-id="<%=i%>">
+              <img src="/images/chairs/armchair-black.png" class="gold" data-id="<%=i%>">
             <%end%>
           </div>
           <%if i%20 == 0%>
@@ -47,13 +47,13 @@
           <%end%>
         <%end%>
 
-        <center><h4>Silver Seats - $60</h4></center>
+        <center><h4 class="seat-title">Silver Seats - $60</h4></center>
         <%for i in 41..100%>
           <div class="seat-tile">
             <%if @seats[i-1].status == "available"%>
-              <img src="/chairs/armchair-white.png" class="silver" data-id="<%=i%>">
+              <img src="/images/chairs/armchair-white.png" class="silver" data-id="<%=i%>">
             <%else%>
-              <img src="/chairs/armchair-black.png" class="silver" data-id="<%=i%>">
+              <img src="/images/chairs/armchair-black.png" class="silver" data-id="<%=i%>">
             <%end%>
           </div>
           <%if i%20 == 0%>
@@ -61,13 +61,13 @@
           <%end%>
         <%end%>
 
-        <center><h4>Bronze Seats - $40</h4></center>
+        <center><h4 class="seat-title">Bronze Seats - $40</h4></center>
         <%for i in 101..200%>
           <div class="seat-tile">
             <%if @seats[i-1].status == "available"%>
-              <img src="/chairs/armchair-white.png" class="bronze" data-id="<%=i%>">
+              <img src="/images/chairs/armchair-white.png" class="bronze" data-id="<%=i%>">
             <%else%>
-              <img src="/chairs/armchair-black.png" class="bronze" data-id="<%=i%>">
+              <img src="/images/chairs/armchair-black.png" class="bronze" data-id="<%=i%>">
             <%end%>
           </div>
           <%if i%20 == 0%>
@@ -122,9 +122,9 @@
                 </tr>
 
                 <tr id="grand-total">
-                  <td><h5>GRAND TOTAL</h5></td>
-                  <td><h5>0</h5></td>
-                  <td><h5>$0</h5></td>
+                  <td><h5  class="grand-total">GRAND TOTAL</h5></td>
+                  <td><h5  class="grand-total">0</h5></td>
+                  <td><h5  class="grand-total">$0</h5></td>
                 </tr>
 
               </tbody>
@@ -197,17 +197,17 @@ $('.seat-tile').on('click', function(){
 
     if(eggData != "none" && chairColour.indexOf('egg') < 0 ) {
       if(eggData === "gold"){
-        chairImage.attr('src', "/eggs/egg-gold.png");
+        chairImage.attr('src', "/images/eggs/egg-gold.png");
       } else if(eggData === "red"){
-        chairImage.attr('src', "/eggs/egg-red.png");
+        chairImage.attr('src', "/images/eggs/egg-red.png");
       } else if(eggData === "green"){
-        chairImage.attr('src', "/eggs/egg-green.png");
+        chairImage.attr('src', "/images/eggs/egg-green.png");
       }
     }else if(chairColour.indexOf('white') > 0 ){
-      chairImage.attr('src', '/chairs/armchair-yellow.png');
+      chairImage.attr('src', '/images/chairs/armchair-yellow.png');
 
     }else if(chairColour.indexOf('yellow') > 0  ||   chairColour.indexOf('egg') > 0){
-      chairImage.attr('src', '/chairs/armchair-white.png');
+      chairImage.attr('src', '/images/chairs/armchair-white.png');
       unReserveChair = true;   //  We are un-reserving a seat
     }
 
