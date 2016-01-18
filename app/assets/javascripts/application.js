@@ -44,7 +44,7 @@ $('document').ready(function(){
 });
 
   // Get the infobox for the map
-  var data = "WDI4 Famous 5</br> 45 William Street,</br> Melbourne, VIC 3000</br> Phone: 04 9999 9999";
+  var data = "45 William Street,</br> Melbourne, VIC 3000</br> Phone: 04 9999 9999";
 
   // Adds the data to the content key
   var infowindow = new google.maps.InfoWindow({

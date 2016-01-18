@@ -1,0 +1,33 @@
+.speaker-name{
+  text-align: center;
+  color: yellow;
+}
+
+.profile-summary{
+  text-align: center;
+  color:white;
+}
+
+.speaker-photo{
+  width: 80%;
+  border: 2px solid white;
+  border-radius: 100px;
+}
+
+.speaker-photo:hover{
+    border: 6 px solid gold;
+}
+
+.speaker-box{
+  /*background-color: rgba(255, 0, 0, 0.2);*/
+}
+
+
+@media screen and (max-width: 480px) {
+
+  .speaker-photo{
+    width: 80%;
+  }
+
+}
+
